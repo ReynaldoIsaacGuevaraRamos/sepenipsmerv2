@@ -1,0 +1,136 @@
+body {
+    background: #ffffff;
+    color: #333333;
+    margin-top: 5rem;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+
+.bg-steel {
+    background-color:#20c48c;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+
+.content-section {
+    background: #bee7c0;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    color: #bee7c0;
+}
+
+a.article-title:hover {
+    color: #bee7c0;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    background: #bee7c0;
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #bee7c0
+}
+
+.article-metadata a:hover {
+    color: #bee7c0;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.container2
+{
+    background: white;
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-left: 2;
+    margin: 2;
+}  
+/* Estilo de las tablas*/ 
+
+table{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 20px;
+}
+
+thead{
+    background-color: #5f788a;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #5f788a;
+    color: white;
+}
+
+
+/* Estilo de las pruebas*/ 
+.imageLogin{
+    width: 300px; 
+    height: 300px;
+}
+.contenido{
+    background: white;
+
+}
+.caja{
+    display: table-cell;
+    padding: 10px;
+}
+
