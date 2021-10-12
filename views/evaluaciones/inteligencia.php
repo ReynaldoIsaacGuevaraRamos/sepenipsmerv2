@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if ($_SESSION["s_usuario"] === null) {
+    header("Location: ../../index.php");
+}
+
+$rol_usuario = $_SESSION["s_rol"];
+echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,10 +83,10 @@
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
                                 </button>
                                 <button value="2" type="button" class="btn btn-outline-secondary">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2" style="transform:rotate(90deg);"/>
                                 </button>
                                 <button value="3" type="button" class="btn btn-outline-secondary">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3" style="transform:rotate(90deg);"/>
                                 </button>
                                 <button value="4" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
@@ -99,10 +110,10 @@
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
                                 </button>
                                 <button value="2" type="button" class="btn btn-outline-secondary">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2" style="transform:rotate(90deg);"/>
                                 </button>
                                 <button value="3" type="button" class="btn btn-outline-secondary">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3" style="transform:rotate(90deg);"/>
                                 </button>
                                 <button value="4" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
@@ -115,12 +126,11 @@
                                 </button>
                             </div>
                         </div>
-
-                        <input  type="submit" name="action" id="btnSiguiente" value="Siguiente" class="btn btn-outline-info">
-                        <a href="#">Anterior</a> 
+                        <button type="button" class="btn btn-secondary btnAnterior">Anterior</button>
+                        <button id='btnSiguiente' type="button" class="btn btn-primary">Siguiente</button>
+                        <input id="btnTerminar" class="btn btn-primary" type="submit" value="Terminar">
                     </form>    
                 </div>
-
             </div>
 
         </div>
@@ -139,10 +149,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            window.onbeforeunload = function() {
-                return "¿Estas seguro que quieres salir?"
+        <script language="JavaScript" type="text/javascript">
+     
+            window.onbeforeunload = preguntarAntesDeSalir;
+     
+            function preguntarAntesDeSalir()
+            {
+            if (true)
+                return "¿Seguro que quieres salir?";
             }
-         </script>
+        </script>
     </body>
 </html>

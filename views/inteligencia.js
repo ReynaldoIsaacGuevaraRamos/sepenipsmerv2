@@ -6,129 +6,88 @@ $(document).ready(function () {
     var indice=0;
     //Respuesta del usuario
     var respuestaSuperior, respuestaInferior;
-    //Deshabilitamos boton de siguiente
-    $("#btnSiguiente").attr('disabled', true); //Desabilito el Botton
+    //Deshabilitamos boton de siguiente y anterior
+    $("#btnSiguiente").attr('disabled', true);
+    $(".btnAnterior").attr('disabled', true);
+    //Ocultamos boton submit Terminar
+    $('#btnTerminar').hide();
 
-    //  Cambia cara del dado superior segun boton seleccionado
-    $('#dadoSuperior button').on('click', function() {
-        var thisBtn = $(this);
+    /*  Cambia cara del dado superior segun boton seleccionado */
+    $('#dadoSuperior button').on('click', function()
+    {
         
+        //boton seleccionado
+        var thisBtn = $(this);
+        //Se muestra el boton como activo
         thisBtn.addClass('active').siblings().removeClass('active');
+        //Se guarda el valor del boton seleccionado
         var btnValue = thisBtn.val();
-        if(btnValue == "0")
+
+        //Se muestra al usuario el boton seleccionado por medio del div carasuperiorDado
+        if(btnValue==2 || btnValue==3)
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
             respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "1")
+        }else
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
             respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "2")
-        {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" width="50" height="50"/>');
-            respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "3")
-        {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" width="50" height="50"/>');
-            respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "4")
-        {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" width="50" height="50"/>');
-            respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "5")
-        {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" width="50" height="50"/>');
-            respuestaSuperior=btnValue;
-        }
-        else if(btnValue == "6")
-        {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" width="50" height="50"/>');
-            respuestaSuperior=btnValue;
-        }
-        else{
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
         }
 
         //Verificamos si ya selecciono ambas caras del dado
         if(respuestaInferior!=null && respuestaSuperior!=null){
-            $("#btnSiguiente").attr('disabled', false); //Desabilito el Botton
-            //Se verifica si nos encontramos en la pregunta 48
+            $("#btnSiguiente").attr('disabled', false); //Habilitamos el boton siguiente
+
+            //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
-                $("#btnSiguiente").val("Terminar");
+                $("#btnTerminar").attr('disabled', false);
             }
         }
 
-      });
+    });
 
     //  Cambia cara del dado inferior segun boton seleccionado
-      $('#dadoInferior button').on('click', function() {
-        var thisBtn = $(this);
-        
-        thisBtn.addClass('active').siblings().removeClass('active');
-        var btnValue = thisBtn.val();
-        if(btnValue == "0")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "1")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "2")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "3")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "4")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "5")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else if(btnValue == "6")
-        {
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" width="50" height="50"/>');
-            respuestaInferior= btnValue;
-        }
-        else{
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
-        }
+      $('#dadoInferior button').on('click', function() 
+      {
+         //boton seleccionado
+         var thisBtn = $(this);
+         //Se muestra el boton como activo
+         thisBtn.addClass('active').siblings().removeClass('active');
+         //Se guarda el valor del boton seleccionado
+         var btnValue = thisBtn.val();
+ 
+         //Se muestra al usuario el boton seleccionado por medio del div carasuperiorDado
+         if(btnValue==2 || btnValue==3)
+         {
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
+             respuestaInferior=btnValue;
+         }else
+         {
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
+             respuestaInferior=btnValue;
+         }
 
         //Verificamos si ya selecciono ambas caras del dado
         if(respuestaInferior!=null && respuestaSuperior!=null){
-            $("#btnSiguiente").attr('disabled', false); //Desabilito el Botton
-            //Se verifica si nos encontramos en la pregunta 48
+
+            $("#btnSiguiente").attr('disabled', false); //Habilitamos el boton siguiente
+
+            //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
-                $("#btnSiguiente").val("Terminar");
+                $("#btnTerminar").attr('disabled', false);
             }
         }
 
       });
 
       
-      //submit siguiente pregunta
-    $('#formularioEvaluacionInteligencia').submit(function (e) 
+      //Boton siguiente
+    $('#btnSiguiente').click(function ()
     {
-        e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
+        //Activamos el boton anterior
+        $(".btnAnterior").attr('disabled', false);
 
         //Verificamos que no nos sobrepasemos del numero de preguntas
-
         if(indice<47)
         {
             //Se guarda la respuesta
@@ -151,8 +110,43 @@ $(document).ready(function () {
             $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
             $('#dadoInferior button').siblings().removeClass('active');
             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
+
+            //Si se esta en la pregunta 48, se oculta el boton siguiente y se muestra el boton terminar
+            if(indice==47){
+                $('#btnTerminar').show();
+                $("#btnTerminar").attr('disabled', true); //Deshabilitamos el boton siguiente
+                $('#btnSiguiente').hide();
+            }
+        }
+    });
+
+    //Boton anterior
+    $(document).on("click", ".btnAnterior", function () {
+
+        //disminuimos indice
+        indice--;
+
+        //Si se retrocede de la pregunta 48, se oculta el boton terminar y se muestra el boton siguiente
+        if(indice==46){
+            $('#btnSiguiente').show();
+            $("#btnSiguiente").attr('disabled', true); //Deshabilitamos el boton siguiente
+            $('#btnTerminar').hide();
+        }
+        //Se ponen en null las respuestas nuevamente
+        respuestaSuperior=null;
+        respuestaInferior= null;
+        
+        //Si nos encontramos en la pregunta 1 deshabilitamos el boton
+        if(indice==0)
+        {
+            $(".btnAnterior").attr('disabled', true);
         }
 
+        //Se modifica la leyenda y la imagen de la evaluacion
+        $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
+        $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+        
     });
+
 });
 
