@@ -74,7 +74,6 @@
       <script type="text/javascript" src="mainEvaluar.js"></script>
     <!--Importar JS del Validaciones del Modal CRUD-->
     <script type="text/javascript" src="validate.js"></script>
-
     <!-- datepicker JS -->
     <script src="../assets/jquery/jquery-ui.min.js"></script>
 

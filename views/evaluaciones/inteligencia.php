@@ -23,7 +23,7 @@
                         </div>
                         <!-- Navbar Right Side  -->
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="index.jsp">Salir</a>
+                            <a class="nav-item nav-link" href="../evaluaciones.php">Salir</a>
                         </div>
                     </div>
                 </div>
@@ -47,18 +47,77 @@
                             <label>¿Que combinación sigue?</label>
                         </div>
                         <div class="form-group">
-                            <img src="../../img/1.PNG" idth="300" height="300" />
+                            <img src="../../img/evaluacionInteligencia/1.gif" idth="300" height="300" />
                         </div>
+                        <!-- Dado que mostrara la respuesta elegida  -->
                         <div class="form-group">
-                            <label>Número superior:</label>
-                            <input type="number" name="numeroSupe" class="form-control">
+                            <div class="row">
+                                <div id="caraSuperiorDado" class="col">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>
+                                </div>
+                                <div class="w-100"></div>
+                                <div id="caraInferiorDado" class="col">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg"  alt="Cinque Terre" width="50" height="50"/>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Grupo de botones para elegir cara superior de dado  -->
                         <div class="form-group">
-                            <label>Número inferior:</label>
-                            <input type="number" name="numeroInfe" class="form-control">
+                            <div id="dadoSuperior" class="btn-group mb-3">
+                                <button value="0" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
+                                </button>
+                                <button value="1" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
+                                </button>
+                                <button value="2" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2"/>
+                                </button>
+                                <button value="3" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3"/>
+                                </button>
+                                <button value="4" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
+                                </button>
+                                <button value="5" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" alt="dado cara 5"/>
+                                </button>
+                                <button value="6" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" alt="dado cara 6"/>
+                                </button>
+                            </div>
                         </div>
+
+                        <!-- Grupo de botones para elegir cara inferior de dado  -->
+                        <div class="form-group">
+                            <div id="dadoInferior" class="btn-group mb-3">
+                                <button value="0" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
+                                </button>
+                                <button value="1" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
+                                </button>
+                                <button value="2" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2"/>
+                                </button>
+                                <button value="3" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3"/>
+                                </button>
+                                <button value="4" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
+                                </button>
+                                <button value="5" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" alt="dado cara 5"/>
+                                </button>
+                                <button value="6" type="button" class="btn btn-outline-secondary">
+                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" alt="dado cara 6"/>
+                                </button>
+                            </div>
+                        </div>
+
                         <input  type="submit" name="action" value="Siguiente" class="btn btn-outline-info">
-                        <a href="index.jsp">return </a>
+                        <a href="../evaluaciones.php">return </a>
                     </form>    
                 </div>
 
@@ -66,7 +125,10 @@
 
         </div>
 
-
+         <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="../../assets/jquery/jquery-3.3.1.min.js"></script>
+        <!--Importar JS del examen de inteligencia-->
+        <script type="text/javascript" src="../inteligencia.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
