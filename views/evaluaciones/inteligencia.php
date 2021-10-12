@@ -12,7 +12,7 @@
         <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4" href="/">Inteligencia</a>
+                    <a class="navbar-brand mr-4" href="/">Pruebad de Inteligencia</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                             aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                         </div>
                         <!-- Navbar Right Side  -->
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="../evaluaciones.php">Salir</a>
+                            <a class="nav-item nav-link" onclick="window.close();" href="#">Salir</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         </div>
 
                         <input  type="submit" name="action" id="btnSiguiente" value="Siguiente" class="btn btn-outline-info">
-                        <a href="../evaluaciones.php">return </a>
+                        <a href="#">Anterior</a> 
                     </form>    
                 </div>
 
@@ -139,5 +139,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            window.onbeforeunload = function() {
+                return "¿Estas seguro que quieres salir?"
+            }
+         </script>
     </body>
 </html>

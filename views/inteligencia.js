@@ -57,6 +57,10 @@ $(document).ready(function () {
         //Verificamos si ya selecciono ambas caras del dado
         if(respuestaInferior!=null && respuestaSuperior!=null){
             $("#btnSiguiente").attr('disabled', false); //Desabilito el Botton
+            //Se verifica si nos encontramos en la pregunta 48
+            if(indice==47){
+                $("#btnSiguiente").val("Terminar");
+            }
         }
 
       });
@@ -109,13 +113,18 @@ $(document).ready(function () {
         //Verificamos si ya selecciono ambas caras del dado
         if(respuestaInferior!=null && respuestaSuperior!=null){
             $("#btnSiguiente").attr('disabled', false); //Desabilito el Botton
+            //Se verifica si nos encontramos en la pregunta 48
+            if(indice==47){
+                $("#btnSiguiente").val("Terminar");
+            }
         }
 
       });
 
       
       //submit siguiente pregunta
-    $('#formularioEvaluacionInteligencia').submit(function (e) {
+    $('#formularioEvaluacionInteligencia').submit(function (e) 
+    {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
 
         //Verificamos que no nos sobrepasemos del numero de preguntas
@@ -142,30 +151,8 @@ $(document).ready(function () {
             $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
             $('#dadoInferior button').siblings().removeClass('active');
             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>');
-
         }
 
-        dui = $.trim($('#dui').val());
-        nombre = $.trim($('#nombre').val());
-        apellido = $.trim($('#apellido').val());
-        correo = $.trim($('#correo').val());
-        cargo = $.trim($('#cargo').val());
-        telefono = $.trim($('#telefono').val());
-        sexo = $.trim($('#sexo').val());
-        fechaNacimiento = $.trim($('#fechaNacimiento').val());
-        $.ajax({
-            url: "../bd/crudEmpleados.php",
-            type: "POST",
-            datatype: "json",
-            data: { id: id, dui: dui, nombre: nombre, apellido: apellido, correo: correo, cargo: cargo, telefono: telefono, sexo: sexo, fechaNacimiento: fechaNacimiento, opcion: opcion },
-            success: function (data) {
-                tablaEmpleados.ajax.reload(null, false);
-            }
-        });
-        $('#modalCRUDAdmin').modal('hide');
-        });
-
-
-
+    });
 });
 
