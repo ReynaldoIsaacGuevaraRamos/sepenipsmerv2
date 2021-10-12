@@ -76,25 +76,25 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <!-- Grupo de botones para elegir cara superior de dado  -->
                         <div class="form-group">
                             <div id="dadoSuperior" class="btn-group mb-3">
-                                <button value="0" type="button" class="btn btn-outline-secondary">
+                                <button id='0s' value="0" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
                                 </button>
-                                <button value="1" type="button" class="btn btn-outline-secondary">
+                                <button id='1s' value="1" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
                                 </button>
-                                <button value="2" type="button" class="btn btn-outline-secondary">
+                                <button id='2s' value="2" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2" style="transform:rotate(90deg);"/>
                                 </button>
-                                <button value="3" type="button" class="btn btn-outline-secondary">
+                                <button id='3s' value="3" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3" style="transform:rotate(90deg);"/>
                                 </button>
-                                <button value="4" type="button" class="btn btn-outline-secondary">
+                                <button id='4s' value="4" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
                                 </button>
-                                <button value="5" type="button" class="btn btn-outline-secondary">
+                                <button id='5s' value="5" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" alt="dado cara 5"/>
                                 </button>
-                                <button value="6" type="button" class="btn btn-outline-secondary">
+                                <button id='6s' value="6" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" alt="dado cara 6"/>
                                 </button>
                             </div>
@@ -103,25 +103,25 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <!-- Grupo de botones para elegir cara inferior de dado  -->
                         <div class="form-group">
                             <div id="dadoInferior" class="btn-group mb-3">
-                                <button value="0" type="button" class="btn btn-outline-secondary">
+                                <button id='0i' value="0" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
                                 </button>
-                                <button value="1" type="button" class="btn btn-outline-secondary">
+                                <button id='1i' value="1" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-1.svg" alt="dado cara 1"/>
                                 </button>
-                                <button value="2" type="button" class="btn btn-outline-secondary">
+                                <button id='2i' value="2" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-2.svg" alt="dado cara 2" style="transform:rotate(90deg);"/>
                                 </button>
-                                <button value="3" type="button" class="btn btn-outline-secondary">
+                                <button id='3i' value="3" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-3.svg" alt="dado cara 3" style="transform:rotate(90deg);"/>
                                 </button>
-                                <button value="4" type="button" class="btn btn-outline-secondary">
+                                <button id='4i' value="4" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-4.svg" alt="dado cara 4"/>
                                 </button>
-                                <button value="5" type="button" class="btn btn-outline-secondary">
+                                <button id='5i' value="5" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-5.svg" alt="dado cara 5"/>
                                 </button>
-                                <button value="6" type="button" class="btn btn-outline-secondary">
+                                <button id='6i' value="6" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-6.svg" alt="dado cara 6"/>
                                 </button>
                             </div>

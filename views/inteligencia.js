@@ -91,7 +91,7 @@ $(document).ready(function () {
         if(indice<47)
         {
             //Se guarda la respuesta
-            respuestas[indice]= respuestaInferior+respuestaSuperior;
+            respuestas[indice]= respuestaSuperior+respuestaInferior;
             //Se ponen en null las respuestas nuevamente
             respuestaSuperior=null;
             respuestaInferior= null;
@@ -145,6 +145,11 @@ $(document).ready(function () {
         //Se modifica la leyenda y la imagen de la evaluacion
         $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
         $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+        //Se muestra las respuestas que el usuario habia seleccionado
+        respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior
+        respuestaInferior=respuestas[indice].charAt(1); //Obtenemos respuestas dado inferior
+        $('#'+respuestaSuperior+'s').click();
+        $('#'+respuestaInferior+'i').click();
         
     });
 
