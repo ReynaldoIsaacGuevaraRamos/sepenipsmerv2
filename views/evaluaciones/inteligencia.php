@@ -32,11 +32,11 @@
         <div  class="container mt-5 col-lg-5">
             <div class="card">
                 <div class="card-body text-center">
-                    <form>
+                    <form id="formularioEvaluacionInteligencia">
                         <div class="form-group">
                             <div class="quiz">
                                 <div class="quiz-user">
-                            <legend class="border-bottom bm-4">Pregunta 1 de 48</legend>
+                            <legend id="leyendaIndice" class="border-bottom bm-4">Pregunta 1 de 48</legend>
                            </div>
                                    <div class="quiz-timer">
                                        <span class="time"></span>
@@ -46,8 +46,8 @@
                         <div class="form-group">
                             <label>¿Que combinación sigue?</label>
                         </div>
-                        <div class="form-group">
-                            <img src="../../img/evaluacionInteligencia/1.gif" idth="300" height="300" />
+                        <div id="imagenPregunta" class="form-group">
+                            <img src="../../img/evaluacionInteligencia/1.gif" width="300" height="300" />
                         </div>
                         <!-- Dado que mostrara la respuesta elegida  -->
                         <div class="form-group">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
 
-                        <input  type="submit" name="action" value="Siguiente" class="btn btn-outline-info">
+                        <input  type="submit" name="action" id="btnSiguiente" value="Siguiente" class="btn btn-outline-info">
                         <a href="../evaluaciones.php">return </a>
                     </form>    
                 </div>
