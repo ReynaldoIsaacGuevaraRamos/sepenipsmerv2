@@ -64,11 +64,11 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <div class="form-group">
                             <div class="row">
                                 <div id="caraSuperiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>
                                 </div>
                                 <div class="w-100"></div>
                                 <div id="caraInferiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg"  alt="Cinque Terre" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg"  alt="Cinque Terre" width="50" height="50"/>
                                 </div>
                             </div>
                         </div>
