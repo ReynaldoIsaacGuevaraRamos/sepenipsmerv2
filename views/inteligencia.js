@@ -34,7 +34,7 @@ $(document).ready(function () {
         //Se guarda el valor del boton seleccionado
         var btnValue = thisBtn.val();
 
-        //Se muestra al usuario el boton seleccionado por medio del div carasuperiorDado
+        //Se muestra al usuario la cara superior del dado seleccionado
         if(btnValue==2 || btnValue==3)
         {
             $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
@@ -52,6 +52,10 @@ $(document).ready(function () {
             //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
                 $("#btnTerminar").attr('disabled', false);
+                //Por motivos de visualizacion de respuestas, tambien aumentamos respuestaAlcanzada
+                respuestaAlcanzada=47;
+                //Se guarda la respuesta
+                respuestas[indice]= respuestaSuperior+respuestaInferior;
             }
         }
 
@@ -88,6 +92,10 @@ $(document).ready(function () {
             //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
                 $("#btnTerminar").attr('disabled', false);
+                //Por motivos de visualizacion de respuestas, tambien aumentamos respuestaAlcanzada
+                respuestaAlcanzada=47;
+                //Se guarda la respuesta
+                respuestas[indice]= respuestaSuperior+respuestaInferior;
             }
         }
 
