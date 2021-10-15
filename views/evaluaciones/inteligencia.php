@@ -23,7 +23,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
         <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                 <div class="container">
-                    <a class="navbar-brand mr-4" href="/">Pruebad de Inteligencia</a>
+                    <a class="navbar-brand mr-4" href="/">Prueba de Inteligencia</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                             aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -47,17 +47,20 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <div class="form-group">
                             <div class="quiz">
                                 <div class="quiz-user">
-                            <legend id="leyendaIndice" class="border-bottom bm-4">Pregunta 1 de 48</legend>
-                           </div>
-                                   <div class="quiz-timer">
-                                       <span class="time"></span>
-                                 </div>
+                                    <legend id="leyendaIndice" class="border-bottom bm-4">Pregunta 1 de 48</legend>
                                 </div>
+                                <div id="quiz-timer" class="quiz-timer">
+                                    <div class="alert alert-success m-0 p-1">
+                                        Tiempo 
+                                        <strong id="testclock">36:00</strong>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="margin-bottom: 0px;">
                             <label>¿Que combinación sigue?</label>
                         </div>
-                        <div id="imagenPregunta" class="form-group">
+                        <div id="imagenPregunta" class="form-group" style="margin-bottom: 0px;">
                             <img src="../../img/evaluacionInteligencia/1.gif" width="300" height="300" />
                         </div>
                         <!-- Dado que mostrara la respuesta elegida  -->
@@ -74,7 +77,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         </div>
 
                         <!-- Grupo de botones para elegir cara superior de dado  -->
-                        <div class="form-group">
+                        <div class="form-group" style="margin-bottom: 0px;">
                             <div id="dadoSuperior" class="btn-group mb-3">
                                 <button id='0s' value="0" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
@@ -101,7 +104,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         </div>
 
                         <!-- Grupo de botones para elegir cara inferior de dado  -->
-                        <div class="form-group">
+                        <div class="form-group" style="margin-bottom: 0px;">
                             <div id="dadoInferior" class="btn-group mb-3">
                                 <button id='0i' value="0" type="button" class="btn btn-outline-secondary">
                                     <img src = "../../img/evaluacionInteligencia/iconos/dice-0.svg" alt="dado cara 0"/>
@@ -139,6 +142,8 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
         <script src="../../assets/jquery/jquery-3.3.1.min.js"></script>
         <!--Importar JS del examen de inteligencia-->
         <script type="text/javascript" src="../inteligencia.js"></script>
+        <!--Importar JS que controlara el cronometro de la evaluacion-->
+        <script type="text/javascript" src="../cronometroTestInteligencia.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
