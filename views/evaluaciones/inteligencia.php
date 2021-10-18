@@ -64,17 +64,17 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                             <label>¿Que combinación sigue?</label>
                         </div>
                         <div id="imagenPregunta" class="form-group" style="margin-bottom: 0px;">
-                            <img src="../../img/evaluacionInteligencia/1.gif" width="300" height="300" />
+                            <img src="../../img/evaluacionInteligencia/1.gif" width="225" height="225" />
                         </div>
                         <!-- Dado que mostrara la respuesta elegida  -->
                         <div class="form-group">
                             <div class="row">
                                 <div id="caraSuperiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>
                                 </div>
                                 <div class="w-100"></div>
                                 <div id="caraInferiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg"  alt="Cinque Terre" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg"  alt="Cinque Terre" width="35" height="35"/>
                                 </div>
                             </div>
                         </div>

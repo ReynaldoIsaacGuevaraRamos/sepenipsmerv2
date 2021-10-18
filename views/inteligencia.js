@@ -37,11 +37,11 @@ $(document).ready(function () {
         //Se muestra al usuario la cara superior del dado seleccionado
         if(btnValue==2 || btnValue==3)
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35" style="transform:rotate(90deg);"/>');
             respuestaSuperior=btnValue;
         }else
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35"/>');
             respuestaSuperior=btnValue;
         }
 
@@ -77,11 +77,11 @@ $(document).ready(function () {
          //Se muestra al usuario el boton seleccionado por medio del div carasuperiorDado
          if(btnValue==2 || btnValue==3)
          {
-             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35" style="transform:rotate(90deg);"/>');
              respuestaInferior=btnValue;
          }else
          {
-             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35"/>');
              respuestaInferior=btnValue;
          }
 
@@ -127,16 +127,16 @@ $(document).ready(function () {
             indice++;
             //Se modifica la leyenda y la imagen de la evaluacion
             $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
-            $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+            $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="225" height="225" />');
 
             //Se deshabilita de nuevo el boton siguiente
             $("#btnSiguiente").attr('disabled', true);
 
             //Tambien se deshabilitan los botones de respuestas
             $('#dadoSuperior button').siblings().removeClass('active');
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>');
             $('#dadoInferior button').siblings().removeClass('active');
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>');
+            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>');
 
             //Si se esta en la pregunta 48, se oculta el boton siguiente y se muestra el boton terminar
             if(indice==47){
@@ -183,7 +183,7 @@ $(document).ready(function () {
 
         //Se modifica la leyenda y la imagen de la evaluacion
         $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
-        $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+        $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="225" height="225" />');
         //Se muestra las respuestas que el usuario habia seleccionado
         respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior
         respuestaInferior=respuestas[indice].charAt(1); //Obtenemos respuestas dado inferior
@@ -213,7 +213,7 @@ $(document).ready(function () {
             });
         });
 
-        //window.open("puntuacionInteligencia.php", "_self"); 
+        window.open("puntuacionInteligencia.php", "_self"); 
         /*dui = $.trim($('#dui').val());
         nombre = $.trim($('#nombre').val());
         apellido = $.trim($('#apellido').val());
