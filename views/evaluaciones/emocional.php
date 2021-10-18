@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if ($_SESSION["s_usuario"] === null) {
+    header("Location: ../../index.php");
+}
+
+$rol_usuario = $_SESSION["s_rol"];
+echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,10 +41,23 @@
 
             <div class="card">
                 <div class="card-body text-left">
-                    <form>
+                    <form name="myForm" method="post">
+                        
                         <div class="mb-1">
-                            <legend class="border-bottom bm-4">Pregunta 1 de 24</legend>
-                            <label class="form-label">Presta mucha atención a los sentimientos.</label>
+                            <legend class="border-bottom bm-4">Indicaciones:</legend>
+                            <label class="form-label">Lea detenidamente cada enunciado, no hay respuestas correctas o incorrectas, marque la respuesta que más se aproxime a sus preferencias:</label>
+
+                        <!-- TIME -->
+                        <div id="quiz-timer" class="quiz-timer">
+                            <div class="alert alert-success m-0 p-1">
+                                Tiempo 
+                                <strong id="testclock">36:00</strong>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="mb-1">
+                            <legend id="leyendaIndice1" class="border-bottom bm-4">Pregunta 1 de 24</legend>
+                            <label id="pregunta1" class="form-label">Presta mucha atención a los sentimientos.</label>
 
                         </div>
                         <div class="mb-3">
@@ -55,9 +78,10 @@
                                 <label class="btn btn-outline-primary" for="btn1radio5">Totalmente de acuerdo</label>
                             </div>
                         </div>
+                        
                         <div class="mb-1">
-                            <legend class="border-bottom bm-4">Pregunta 2 de 24</legend>
-                            <label class="form-label">Normalmente me preocupo por lo que siento:</label>
+                            <legend id="leyendaIndice2" class="border-bottom bm-4">Pregunta 2 de 24</legend>
+                            <label id="pregunta2" class="form-label">Normalmente me preocupo por lo que siento:</label>
 
                         </div>
                         <div class="mb-3">
@@ -79,8 +103,8 @@
                             </div>
                         </div>
                         <div class="mb-1">
-                            <legend class="border-bottom bm-4">Pregunta 3 de 24</legend>
-                            <label class="form-label">Normalmente dedico tiempo a pensar en mis emociones:</label>
+                            <legend id="leyendaIndice3" class="border-bottom bm-4">Pregunta 3 de 24</legend>
+                            <label id="pregunta3" class="form-label">Normalmente dedico tiempo a pensar en mis emociones:</label>
 
                         </div>
                         <div class="mb-3">
@@ -102,8 +126,8 @@
                             </div>
                         </div>
                         <div class="mb-1">
-                            <legend class="border-bottom bm-4">Pregunta 4 de 24</legend>
-                            <label class="form-label">Pienso que merece la pena prestar atención a mis emociones:</label>
+                            <legend id="leyendaIndice4" class="border-bottom bm-4">Pregunta 4 de 24</legend>
+                            <label id="pregunta4" class="form-label">Pienso que merece la pena prestar atención a mis emociones:</label>
 
                         </div>
                         <div class="mb-3">
@@ -124,10 +148,14 @@
                                 <label class="btn btn-outline-primary" for="btn4radio5">Totalmente de acuerdo</label>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        
+                        <!-- <div class="mb-3">
                             <input  type="submit" name="action" value="Siguiente" class="btn btn-outline-info">
                             <a href="index.jsp">return </a>
-                        </div>
+                        </div> -->
+                        <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Siguiente" onClick="submitRadioButton()"-->
+                        <button id='btnSiguiente' type="button" class="btn btn-primary">Siguiente</button>
+                        <input id="btnTerminar" class="btn btn-primary" type="submit" value="Terminar">
 
                     </form>    
 
@@ -136,8 +164,27 @@
         </div>
 
 
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="../../assets/jquery/jquery-3.3.1.min.js"></script>
+        <!--Importar JS del examen de prueba proyectiva-->
+        <script type="text/javascript" src="../emocional.js"></script>
+        <!--Importar JS que controlara el cronometro de la evaluacion-->
+        <script type="text/javascript" src="../cronometroTestInteligencia.js"></script>
+
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script></body>
+
+        <script language="JavaScript" type="text/javascript">
+            
+            window.onbeforeunload = preguntarAntesDeSalir;
+
+            function preguntarAntesDeSalir()
+            {
+            if (true)
+                return "¿Seguro que quieres salir?";
+            }
+
+        </script>
 </html>
 
