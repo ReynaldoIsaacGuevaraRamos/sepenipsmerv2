@@ -15,11 +15,6 @@ $(document).ready(function () {
     /*---------------------------------------------------------*/
     /*acciones iniciales*/
     /*---------------------------------------------------------*/
-    //Deshabilitamos boton de siguiente y anterior
-    $("#btnSiguiente").attr('disabled', true);
-    $(".btnAnterior").attr('disabled', true);
-    //Ocultamos boton submit Terminar
-    $('#btnTerminar').hide();
 
     /*---------------------------------------------------------*/
     /*  Cambia cara del dado superior segun boton seleccionado */
@@ -198,40 +193,7 @@ $(document).ready(function () {
     $('#formularioEvaluacionInteligencia').submit(function (e) {
 
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
-        window.onbeforeunload = null; //Desactiva la prevencion al cerrar ventana
-
-        //Variable que tendrá la calificacion
-        var respuestasCorrectas=0;
-        var i=0;
-
-        $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
-            $.each( data, function( key, val ) {
-                while(i<48){
-                    console.log("Respuesta "+(i+1)+": "+val[i].respuesta);
-                    ++i;
-                }
-            });
-        });
-
-        //window.open("puntuacionInteligencia.php", "_self"); 
-        /*dui = $.trim($('#dui').val());
-        nombre = $.trim($('#nombre').val());
-        apellido = $.trim($('#apellido').val());
-        correo = $.trim($('#correo').val());
-        cargo = $.trim($('#cargo').val());
-        telefono = $.trim($('#telefono').val());
-        sexo = $.trim($('#sexo').val());
-        fechaNacimiento = $.trim($('#fechaNacimiento').val());
-        $.ajax({
-            url: "../bd/crudEmpleados.php",
-            type: "POST",
-            datatype: "json",
-            data: { id: id, dui: dui, nombre: nombre, apellido: apellido, correo: correo, cargo: cargo, telefono: telefono, sexo: sexo, fechaNacimiento: fechaNacimiento, opcion: opcion },
-            success: function (data) {
-                tablaEmpleados.ajax.reload(null, false);
-            }
-        });
-        $('#modalCRUDAdmin').modal('hide');*/
+        window.open("../evaluaciones.php", "_self");
     });
 
 
