@@ -146,7 +146,7 @@ $(document).ready(function () {
             }
 
             //verificamos si ya se respondio la pregunta a mostrar
-            if(indice<=respuestaAlcanzada)
+            if(indice<=respuestaAlcanzada && respuestas[indice]!=null)
             {
                 //Si ya la habia contestado, se muestra la respuestas respectiva
                 respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior

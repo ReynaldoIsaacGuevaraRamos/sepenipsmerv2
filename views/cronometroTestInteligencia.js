@@ -1,5 +1,5 @@
 //Tiempo que durara la evaluacion en 'minutos:segundos'
-var minutos=36; //36 minuto
+var minutos=1; //36 minuto
 var segundos= 00; //0 segundos
 
 function mostrarCronometro()
@@ -7,6 +7,7 @@ function mostrarCronometro()
 
     var divReloj=document.getElementById('quiz-timer');//Elemento que contendra el reloj
     var reloj= document.getElementById("testclock"); //Elemento donde se mostrará el tiempo
+    var formulario= document.getElementById("formularioEvaluacionInteligencia"); //formulario de la prueba
     
     --segundos;//Cada segundo, se disminuye un segundo
 
@@ -25,7 +26,7 @@ function mostrarCronometro()
 
     reloj.innerHTML=horaAMostrar;//Se muestra el nuevo tiempo
     
-    //Si el tiempo es 00:00 este se detiene
+    //Si el tiempo es 00:00 este se detiene y se termina el cuestionario
     if(horaAMostrar=="0:0"){
         reloj.innerHTML='Se acabó tu tiempo';
         clearInterval(intervalo);
