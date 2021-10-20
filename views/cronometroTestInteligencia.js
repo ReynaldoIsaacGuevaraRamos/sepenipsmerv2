@@ -1,6 +1,6 @@
 //Tiempo que durara la evaluacion en 'minutos:segundos'
-var minutos=1; //36 minuto
-var segundos= 00; //0 segundos
+var minutos=36; //36 minuto
+var segundos=0; //0 segundos
 
 function mostrarCronometro()
 {
@@ -28,8 +28,14 @@ function mostrarCronometro()
     
     //Si el tiempo es 00:00 este se detiene y se termina el cuestionario
     if(horaAMostrar=="0:0"){
-        reloj.innerHTML='Se acabó tu tiempo';
-        clearInterval(intervalo);
+
+        clearInterval(intervalo);//Detenemos e tiempo
+
+        //Se crea y se dispara un evento submit artificialmente
+        const form = document.querySelector("#formularioEvaluacionInteligencia");
+        const formTrigger = form.querySelector("button.submit");
+        const submitEvent = new SubmitEvent("submit", { submitter: formTrigger });
+        form.dispatchEvent(submitEvent);
     }
     
 }

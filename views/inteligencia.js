@@ -200,20 +200,28 @@ $(document).ready(function () {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
         window.onbeforeunload = null; //Desactiva la prevencion al cerrar ventana
 
-        //Variable que tendrá la calificacion
-        var respuestasCorrectas=0;
-        var i=0;
-
+        //Calificamos la prueba realizada por el usuario
+        var respuestasCorrectas=0;//Variable que contendrá el numero de respuestas correctas
+        var i=0;//indice para recorrer respuestas
+        //Comparamos respuestas correctas almacenados en archivo json con las que selecciono el usuario
         $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
             $.each( data, function( key, val ) {
+
+                //Recorremos y comparamos cada respuesta
                 while(i<48){
-                    console.log("Respuesta "+(i+1)+": "+val[i].respuesta);
+
+                    //Si la respuesta es correcta se aumenta la variable respuestasCorrectas
+                    if(val[i].respuesta.toString() == respuestas[i]){
+                        ++respuestasCorrectas;
+                    }
                     ++i;
                 }
+                
+                console.log("respuestas correctas: "+respuestasCorrectas);
             });
         });
 
-        window.open("puntuacionInteligencia.php", "_self"); 
+        //window.open("puntuacionInteligencia.php", "_self"); 
         /*dui = $.trim($('#dui').val());
         nombre = $.trim($('#nombre').val());
         apellido = $.trim($('#apellido').val());

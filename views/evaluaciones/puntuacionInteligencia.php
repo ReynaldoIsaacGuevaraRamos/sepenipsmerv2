@@ -34,7 +34,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <div class="form-group">
                             <div class="quiz">
                                 <div class="quiz-user">
-                                    <legend id="leyendaIndice" class="border-bottom bm-4">Su puntuacion</legend>
+                                    <legend id="leyendaIndice" class="border-bottom bm-4">Evaluación finalizada</legend>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <div class="form-group" style="margin-bottom: 0px;">
                             <label></label>
                         </div>
-                        <input id="btnAceptar" class="btn btn-primary btn-lg" type="submit" value="Aceptar">
+                        <input id="btnAceptar" onclick="window.close();" class="btn btn-primary btn-lg" type="submit" value="Aceptar">
                     </form>    
                 </div>
             </div>

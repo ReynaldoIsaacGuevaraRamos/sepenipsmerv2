@@ -187,15 +187,6 @@ $(document).ready(function () {
         
     });
 
-    /*---------------------------------------------------------*/
-    /*Al hacer clic en el boton terminar*/
-    /*---------------------------------------------------------*/
-    $('#formularioEvaluacionInteligencia').submit(function (e) {
-
-        e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
-        window.open("../evaluaciones.php", "_self");
-    });
-
 
 });
 
