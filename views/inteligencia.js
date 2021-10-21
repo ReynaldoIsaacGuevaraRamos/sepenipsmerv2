@@ -11,6 +11,8 @@ $(document).ready(function () {
     var respuestaAlcanzada=0;
     //Respuesta del usuario
     var respuestaSuperior, respuestaInferior;
+    //Variable que contendrá el numero de respuestas correctas
+    var respuestasCorrectas=0;
 
     /*---------------------------------------------------------*/
     /*acciones iniciales*/
@@ -201,7 +203,6 @@ $(document).ready(function () {
         window.onbeforeunload = null; //Desactiva la prevencion al cerrar ventana
 
         //Calificamos la prueba realizada por el usuario
-        var respuestasCorrectas=0;//Variable que contendrá el numero de respuestas correctas
         var i=0;//indice para recorrer respuestas
         //Comparamos respuestas correctas almacenados en archivo json con las que selecciono el usuario
         $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
@@ -216,30 +217,13 @@ $(document).ready(function () {
                     }
                     ++i;
                 }
-                
-                console.log("respuestas correctas: "+respuestasCorrectas);
+                 //Enviamos las respuestas corectas para mostrar los resultados al cliente usando localStorage
+                localStorage.setItem('respuestasCorrectas', respuestasCorrectas);
             });
         });
 
-        //window.open("puntuacionInteligencia.php", "_self"); 
-        /*dui = $.trim($('#dui').val());
-        nombre = $.trim($('#nombre').val());
-        apellido = $.trim($('#apellido').val());
-        correo = $.trim($('#correo').val());
-        cargo = $.trim($('#cargo').val());
-        telefono = $.trim($('#telefono').val());
-        sexo = $.trim($('#sexo').val());
-        fechaNacimiento = $.trim($('#fechaNacimiento').val());
-        $.ajax({
-            url: "../bd/crudEmpleados.php",
-            type: "POST",
-            datatype: "json",
-            data: { id: id, dui: dui, nombre: nombre, apellido: apellido, correo: correo, cargo: cargo, telefono: telefono, sexo: sexo, fechaNacimiento: fechaNacimiento, opcion: opcion },
-            success: function (data) {
-                tablaEmpleados.ajax.reload(null, false);
-            }
-        });
-        $('#modalCRUDAdmin').modal('hide');*/
+        //Se muestra ventana con las respuestas correctas, la puntuacion (percentiles) y el resultado de la evaluacion
+        window.open("puntuacionInteligencia.php", "_self"); 
     });
 
 
