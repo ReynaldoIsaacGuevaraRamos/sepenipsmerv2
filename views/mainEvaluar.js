@@ -16,12 +16,11 @@ $(document).ready(function () {
             { "data": "dui" },
             { "data": "nombre" },
             { "data": "apellido" },
-            { "data": "correo" },
             { "data": "cargo" },
-            { "data": "telefono" },
-            { "data": "sexo" },
-            { "data": "fechaNacimiento" },
-            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluar'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCancelarEval'><i class='fas fa-fw fa-times'></i></button></div></div>" }
+            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarInteligencia'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalInteligencia'><i class='fas fa-fw fa-times'></i></button></div></div>" },
+            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarPersonalidad'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalPersonalidad'><i class='fas fa-fw fa-times'></i></button></div></div>" },
+            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarProyectiva'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalProyetiva'><i class='fas fa-fw fa-times'></i></button></div></div>" },
+            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarEmocional'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalEmocional'><i class='fas fa-fw fa-times'></i></button></div></div>" }
         ],
         "language": {
             "lengthMenu": "Mostrar _MENU_ registros",
@@ -70,17 +69,262 @@ $(document).ready(function () {
 
 
 
+    /*---------------------------------------------------------*/
+    /*Evaluacion de Inteligencia*/
+    /*---------------------------------------------------------*/
 
 
-
-    //Editar        
-    $(document).on("click", ".btnEvaluar", function () {
-        Swal.fire(
-            'En curso!',
-            'El empleado esta en evaluación',
-            'success'
-        );
+    //Habilitar cuestionario de inteligencia        
+    $(document).on("click", ".btnEvaluarInteligencia", function () {
+        fila = $(this).closest("tr");
+        dui = parseInt(fila.find('td:eq(1)').text());
+        nombre = fila.find('td:eq(2)').text();
+        opcion = 2;
+        valorEvaluacion=1;
+        $.ajax({
+            url: "../bd/evaluarEmpleados.php",
+            type: "POST",
+            datatype: "json",
+            data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+            success: function (data) {
+                Swal.fire(
+                    'En curso!',
+                    nombre+' ya puede realizar la evaluación de inteligencia',
+                    'success'
+                );
+            }
+        });
+        
     });
+
+    //Deshabilitar cuestionario de inteligencia        
+    $(document).on("click", ".btnCanEvalInteligencia", function () 
+    {
+        
+        Swal.fire({
+            //Mensaje para confirmar la acción 
+        title: "¿Está seguro de que desea cancelar la evaluación?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#5cb85c',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.value) {
+                fila = $(this).closest("tr");
+                dui = parseInt(fila.find('td:eq(1)').text());
+                opcion = 2;
+                valorEvaluacion=0;
+                $.ajax({
+                    url: "../bd/evaluarEmpleados.php",
+                    type: "POST",
+                    datatype: "json",
+                    data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+                    success: function (data) {
+                        Swal.fire(
+                            'Cancelada!',
+                            'La evaluación de inteligencia ha sido deshabilitada para '+nombre,
+                            'success'
+                        );
+                    }
+                });
+            }
+        })
+        
+    });
+
+    /*---------------------------------------------------------*/
+    /*Evaluacion de Personalidad*/
+    /*---------------------------------------------------------*/
+
+
+    //Habilitar cuestionario de personalidad        
+    $(document).on("click", ".btnEvaluarPersonalidad", function () {
+        fila = $(this).closest("tr");
+        dui = parseInt(fila.find('td:eq(1)').text());
+        nombre = fila.find('td:eq(2)').text();
+        opcion = 3;
+        valorEvaluacion=1;
+        $.ajax({
+            url: "../bd/evaluarEmpleados.php",
+            type: "POST",
+            datatype: "json",
+            data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+            success: function (data) {
+                Swal.fire(
+                    'En curso!',
+                    nombre+' ya puede realizar la evaluación de personalidad',
+                    'success'
+                );
+            }
+        });
+        
+    });
+
+    //Deshabilitar cuestionario de personalidad     
+    $(document).on("click", ".btnCanEvalPersonalidad", function () 
+    {
+        
+        Swal.fire({
+            //Mensaje para confirmar la acción 
+        title: "¿Está seguro de que desea cancelar la evaluación?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#5cb85c',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.value) {
+                fila = $(this).closest("tr");
+                dui = parseInt(fila.find('td:eq(1)').text());
+                opcion = 3;
+                valorEvaluacion=0;
+                $.ajax({
+                    url: "../bd/evaluarEmpleados.php",
+                    type: "POST",
+                    datatype: "json",
+                    data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+                    success: function (data) {
+                        Swal.fire(
+                            'Cancelada!',
+                            'La evaluación de personalidad ha sido deshabilitada para '+nombre,
+                            'success'
+                        );
+                    }
+                });
+            }
+        })
+        
+    });
+
+    /*---------------------------------------------------------*/
+    /*Evaluacion Proyectiva*/
+    /*---------------------------------------------------------*/
+
+
+    //Habilitar cuestionario proyectivo        
+    $(document).on("click", ".btnEvaluarProyectiva", function () {
+        fila = $(this).closest("tr");
+        dui = parseInt(fila.find('td:eq(1)').text());
+        nombre = fila.find('td:eq(2)').text();
+        opcion = 4;
+        valorEvaluacion=1;
+        $.ajax({
+            url: "../bd/evaluarEmpleados.php",
+            type: "POST",
+            datatype: "json",
+            data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+            success: function (data) {
+                Swal.fire(
+                    'En curso!',
+                    nombre+' ya puede realizar la evaluación proyectiva',
+                    'success'
+                );
+            }
+        });
+        
+    });
+
+    //Deshabilitar cuestionario proyectivo        
+    $(document).on("click", ".btnCanEvalProyectiva", function () 
+    {
+        
+        Swal.fire({
+            //Mensaje para confirmar la acción 
+        title: "¿Está seguro de que desea cancelar la evaluación?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#5cb85c',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.value) {
+                fila = $(this).closest("tr");
+                dui = parseInt(fila.find('td:eq(1)').text());
+                opcion = 4;
+                valorEvaluacion=0;
+                $.ajax({
+                    url: "../bd/evaluarEmpleados.php",
+                    type: "POST",
+                    datatype: "json",
+                    data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+                    success: function (data) {
+                        Swal.fire(
+                            'Cancelada!',
+                            'La evaluación proyectiva ha sido deshabilitada para '+nombre,
+                            'success'
+                        );
+                    }
+                });
+            }
+        })
+        
+    });
+
+    /*---------------------------------------------------------*/
+    /*Evaluacion emocional*/
+    /*---------------------------------------------------------*/
+
+
+    //Habilitar cuestionario emocional       
+    $(document).on("click", ".btnEvaluarEmocional", function () {
+        fila = $(this).closest("tr");
+        dui = parseInt(fila.find('td:eq(1)').text());
+        nombre = fila.find('td:eq(2)').text();
+        opcion = 5;
+        valorEvaluacion=1;
+        $.ajax({
+            url: "../bd/evaluarEmpleados.php",
+            type: "POST",
+            datatype: "json",
+            data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+            success: function (data) {
+                Swal.fire(
+                    'En curso!',
+                    nombre+' ya puede realizar la evaluación emocional',
+                    'success'
+                );
+            }
+        });
+        
+    });
+
+    //Deshabilitar cuestionario emocional        
+    $(document).on("click", ".btnCanEvalEmocional", function () 
+    {
+        
+        Swal.fire({
+            //Mensaje para confirmar la acción 
+        title: "¿Está seguro de que desea cancelar la evaluación?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#5cb85c',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.value) {
+                fila = $(this).closest("tr");
+                dui = parseInt(fila.find('td:eq(1)').text());
+                opcion = 5;
+                valorEvaluacion=0;
+                $.ajax({
+                    url: "../bd/evaluarEmpleados.php",
+                    type: "POST",
+                    datatype: "json",
+                    data: { dui: dui, opcion: opcion, valorEvaluacion: valorEvaluacion },
+                    success: function (data) {
+                        Swal.fire(
+                            'Cancelada!',
+                            'La evaluación emocional ha sido deshabilitada para '+nombre,
+                            'success'
+                        );
+                    }
+                });
+            }
+        })
+        
+    });
+
 
     //Borrar
     $(document).on("click", ".btnCancelarEval", function () {
