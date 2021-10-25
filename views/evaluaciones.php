@@ -48,7 +48,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Proyectiva</h5>
                     <p class="card-text ">A continuación se mostrara una imagen con 8 colores, ordenelos de la forma que más le paresca sin repetirlos, seleccionando uno por cada lista de items</p>
-                    <form action="./evaluaciones/proyectiva.php">
+                    <form method="post"  target="print_popup"  action="./evaluaciones/proyectiva.php" onsubmit="window.open('about:blank','print_popup','width=1000,height=800');">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="completeProyec" checked disabled>
                             <label class="form-check-label" for="completProyect" disabled>
