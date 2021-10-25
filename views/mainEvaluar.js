@@ -19,7 +19,7 @@ $(document).ready(function () {
             { "data": "cargo" },
             { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarInteligencia'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalInteligencia'><i class='fas fa-fw fa-times'></i></button></div></div>" },
             { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarPersonalidad'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalPersonalidad'><i class='fas fa-fw fa-times'></i></button></div></div>" },
-            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarProyectiva'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalProyetiva'><i class='fas fa-fw fa-times'></i></button></div></div>" },
+            { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarProyectiva'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalProyectiva'><i class='fas fa-fw fa-times'></i></button></div></div>" },
             { "defaultContent": "<div class='text-center'><div class='btn-group'><button class='btn btn-primary btn-sm btnEvaluarEmocional'><i class='fas fa-fw fa-play'></i></button><button class='btn btn-danger btn-sm btnCanEvalEmocional'><i class='fas fa-fw fa-times'></i></button></div></div>" }
         ],
         "language": {
@@ -113,6 +113,7 @@ $(document).ready(function () {
             if (result.value) {
                 fila = $(this).closest("tr");
                 dui = parseInt(fila.find('td:eq(1)').text());
+                nombre = fila.find('td:eq(2)').text();
                 opcion = 2;
                 valorEvaluacion=0;
                 $.ajax({
@@ -177,6 +178,7 @@ $(document).ready(function () {
             if (result.value) {
                 fila = $(this).closest("tr");
                 dui = parseInt(fila.find('td:eq(1)').text());
+                nombre = fila.find('td:eq(2)').text();
                 opcion = 3;
                 valorEvaluacion=0;
                 $.ajax({
@@ -241,6 +243,7 @@ $(document).ready(function () {
             if (result.value) {
                 fila = $(this).closest("tr");
                 dui = parseInt(fila.find('td:eq(1)').text());
+                nombre = fila.find('td:eq(2)').text();
                 opcion = 4;
                 valorEvaluacion=0;
                 $.ajax({
@@ -305,6 +308,7 @@ $(document).ready(function () {
             if (result.value) {
                 fila = $(this).closest("tr");
                 dui = parseInt(fila.find('td:eq(1)').text());
+                nombre = fila.find('td:eq(2)').text();
                 opcion = 5;
                 valorEvaluacion=0;
                 $.ajax({
