@@ -2,25 +2,33 @@ $(document).ready(function () {
 
     //Validacion para que solo se escoja un color
     $('.ct').change(function(){
-        var combo = [];
         var enable = false;
         $(".ct").each(function(index, element){
             var value = $(this).children( 'option:selected' ).val();
             if(value != 0){
-                combo.forEach(function(element){
-                    if(element== value){
-                        enable = false;
-                        return false;
-                    }else{
-                        enable = true;
-                    }
-                });
-                combo.push(value);
+                enable = true;
             }else{
                 enable = false;
+                return false;
             }
         });
-        $('#btnTerminar').prop( "disabled", !enable);
+        let SelectValues = $(".ct option:selected").map(function(){
+            return $(this).val();
+        }).get();
+        let map = {};
+        let result = false;
+        for ( let i =0;i < SelectValues.length; i++){
+            if(map[SelectValues[i]]){
+              result = true;
+              break
+            }
+            map[SelectValues[i]] = true;
+        }
+        if(!result && enable){
+          $('#btnTerminar').prop( "disabled", false)
+        }else{
+          $('#btnTerminar').prop( "disabled", true);
+        }
     });
 
     $('#PruevaProyectiva').submit(function (e) {
