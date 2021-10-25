@@ -8,7 +8,7 @@
         <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-        <script   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
               <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
         <title>Proyectiva</title>
     </head>
@@ -56,7 +56,7 @@
 
                         </div>
                         <div class="form-group">
-                            <img src="../../img/lusher.jpg" idth="300" height="300" />
+                            <img src="../../img/lusher.jpg" class="img-fluid" alt="Responsive image"/>
                         </div>
                         <div class="form-group">
                             <label>1 - Primer color: </label>
@@ -170,15 +170,17 @@
                                 <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
-                        <input href="index.jsp" type="submit" name="action" value="Finalizar" class="btn btn-outline-info btnend" disabled="true">
+                        <input id="btnTerminar" class="btn btn-danger" type="submit" value="Terminar" disabled="true">
                     </form>
                 </div>
             </div>
-
+            <script src="../../assets/popper/popper.min.js"></script>
+            <script src="../../assets/sweetalert2/sweetalert2.all.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             <script type="text/javascript" src="../Proyectiva.js"></script>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
                 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>

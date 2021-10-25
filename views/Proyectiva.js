@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     //Validacion para que solo se escoja un color
     $('.ct').change(function(){
         var combo = [];
@@ -20,26 +20,9 @@ $(document).ready(function () {
                 enable = false;
             }
         });
-        $('.btnend').prop( "disabled", !enable);
+        $('#btnTerminar').prop( "disabled", !enable);
     });
 
-    $('#PruevaProyectiva').submit(function (e) {
-
-        e.preventDefault(); 
-        window.onbeforeunload = null; 
-        var respuestasCorrectas=0;
-        var i=0;
-
-        $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
-            $.each( data, function( key, val ) {
-                while(i<48){
-                    console.log("Respuesta "+(i+1)+": "+val[i].respuesta);
-                    ++i;
-                }
-            });
-        });
-
-    });
     $('#PruevaProyectiva').submit(function (e) {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
 
@@ -52,28 +35,34 @@ $(document).ready(function () {
         r7 = $.trim($('#R7').val());
         r8 = $.trim($('#R8').val());
         $.ajax({
-            url: "../bd/crudAdministradores.php",
+            url: "../../bd/evaProyectiva.php",
             type: "POST",
             datatype: "json",
             data: {r1: r1, r2: r2, r3: r3, r4: r4, r5: r5, r6: r6, r7: r7, r8: r8 },
-            success:function(data){ 
-                    Swal.fire({
-                        type:'success',
-                        title:'¡Mensaje enviado!',
-                        confirmButtonColor:'#3085d6',
-                        confirmButtonText:'Terminar'
-                    }).then((result) => {
-                        if(result.value){
-                            window.location.href = "views/evaluaciones.php";
-                        }
-                    })
-                    
-                }
-            } 
+            success:function(data){
+              if(data == "null"){
+                  Swal.fire({
+                      type:'error',
+                      title:'Data incorrecta intente de nuevo',
+                  });
+              }else{
+                  Swal.fire({
+                      type:'success',
+                      title:'Resultado: '+data,
+                      confirmButtonColor:'#3085d6',
+                      confirmButtonText:'Terminar'
+                  }).then((result) => {
+                      if(result.value){
+                          window.close();
+                      }
+                  })
+
+              }
+            }
         });
     });
 
 
 
-});
 
+});

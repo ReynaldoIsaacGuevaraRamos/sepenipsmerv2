@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
@@ -131,7 +132,7 @@ if($r7 == "AZUL"){
     $diagnotico7 = "Rechazo a la neutralidad";
 }
 
-$resultadoFinal = $diagnotico1.", ".$diagnotico2.", ".$diagnotico3.", ".$diagnotico4.", ".$diagnotico5.", ".$diagnotico6.", ".$diagnotico7.", ".$diagnotico8.".";
+$data = $diagnotico1.", ".$diagnotico2.", ".$diagnotico3.", ".$diagnotico4.", ".$diagnotico5.", ".$diagnotico6.", ".$diagnotico7.", ".$diagnotico8.".";
 
         //$password = hash('ripemd160', $password); // Incriptación de la contraseña
         //$consulta = "INSERT INTO resultados_proyectiva (resultado ) VALUES('$resultadoFinal') ";
@@ -142,6 +143,7 @@ $resultadoFinal = $diagnotico1.", ".$diagnotico2.", ".$diagnotico3.", ".$diagnot
         //$resultado = $conexion->prepare($consulta);
         //$resultado->execute();
         //$data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-}
 
+
+print json_encode($data);
 $conexion = null;
