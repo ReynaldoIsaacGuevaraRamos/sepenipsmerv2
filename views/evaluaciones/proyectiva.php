@@ -37,6 +37,19 @@
             <div class="card">
                 <div class="card-body text-center">
                     <form id="PruevaProyectiva">
+                      <div class="form-group">
+                          <div class="quiz">
+                              <div class="quiz-user">
+                                  <legend id="leyendaIndice" class="border-bottom bm-4">Pregunta 1 de 185</legend>
+                              </div>
+                              <div id="quiz-timer" class="quiz-timer">
+                                  <div class="alert alert-success m-0 p-1">
+                                      Tiempo
+                                      <strong id="testclock">30:00</strong>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                         <div class="form-group">
                             <legend class="border-bottom bm-4">Pregunta</legend>
                             <label>¿Ordene los colores segun su criterio?</label>
@@ -172,5 +185,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../cronometroTestProyectiva.js"></script>
     </body>
 </html>
