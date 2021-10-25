@@ -83,7 +83,7 @@ echo "<script>console.log( 'Sexo: " . $rol_sexo  . "' );</script>";
             <?php  } ?>
             <!-- Nav Item - Vista del psicolgo -->
             <?php
-            if ($rol_usuario == 2 || $rol_usuario == 1) { //Si es  psicologo o soporte 
+            if ($rol_usuario == 2 || $rol_usuario == 1) { //Si es  psicologo o soporte
             ?>
                 <li class="nav-item active">
                     <a class="nav-link" href="administrador.php">
@@ -122,6 +122,11 @@ echo "<script>console.log( 'Sexo: " . $rol_sexo  . "' );</script>";
                         <span>Evaluaciones</span></a>
                 </li>
             <?php  } ?>
+            <li class="nav-item active">
+                    <a class="nav-link" href="Cambio.php">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Cambiar Contrasena</span></a>
+                </li>
             <!-- Divider -->
             <?php
             if ($rol_usuario == 3 || $rol_usuario == 2 || $rol_usuario == 1) { //Si es administrador, psicologo o soporte

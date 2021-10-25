@@ -32,10 +32,12 @@ if($resultado->rowCount() >= 1){
     $_SESSION["s_usuario"] = $fila[0][2];
     $_SESSION["s_rol"] = $fila[0][3];
     $_SESSION["s_sexo"] = $fila[0][4];
+    $_SESSION["s_usu"] = $usuario;
 }else{
     $_SESSION["s_usuario"] = null;
     $_SESSION["s_rol"] = null;
     $_SESSION["s_sexo"] = null;
+    $_SESSION["s_usu"] = $usuario;
     $data=null;
 }
 
@@ -48,5 +50,4 @@ $conexion=null;
 // 1: Administrador de sistema - Soporte
 // 2: Pisolcogo (Lic- Nelson Ayala) - Psicologo
 // 3: Administrador de recursos humaos - AdministradorRRHH
-// 4: Empleados 
-
+// 4: Empleados

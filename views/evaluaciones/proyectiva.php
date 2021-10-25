@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+        <script   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
               <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
         <title>Proyectiva</title>
     </head>
@@ -31,7 +36,7 @@
         <div  class="container mt-5 col-lg-5">
             <div class="card">
                 <div class="card-body text-center">
-                    <form>
+                    <form id="PruevaProyectiva">
                         <div class="form-group">
                             <legend class="border-bottom bm-4">Pregunta</legend>
                             <label>¿Ordene los colores segun su criterio?</label>
@@ -39,129 +44,133 @@
                         </div>
                         <div class="form-group">
                             <img src="../../img/lusher.jpg" idth="300" height="300" />
-                        </div>       
+                        </div>
                         <div class="form-group">
                             <label>1 - Primer color: </label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R1"class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>2 - Segundo color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R2" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                          <div class="form-group">
                             <label>3 - Tercer color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R3" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                          <div class="form-group">
                             <label>4 - Cuarto color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R4" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                          <div class="form-group">
                             <label> 5 - Quinto color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R5" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                          <div class="form-group">
                             <label>6 - Sexto color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R6" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>7 - Septimo color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R7" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>8 - Octavo color:</label>
-                            <select class="form-select form-control-lg mb-2" aria-label=".form-select-lg example">
-                                <option value="1">AZUL</option>
-                                <option value="2">VERDE</option>
-                                <option value="3">ROJO</option>
-                                <option value="3">AMARILLO</option>
-                                <option value="3">VIOLETA</option>
-                                <option value="3">MARRON</option>
-                                <option value="3">GRIS</option>
-                                <option value="3">NEGRO</option>
+                            <select id="R8" class="form-select form-control-lg mb-2 ct" aria-label=".form-select-lg example">
+                                <option value="0">NULL</option>
+                                <option value="AZUL">AZUL</option>
+                                <option value="VERDE">VERDE</option>
+                                <option value="ROJO">ROJO</option>
+                                <option value="AMARILLO">AMARILLO</option>
+                                <option value="VIOLETA">VIOLETA</option>
+                                <option value="MARRON">MARRON</option>
+                                <option value="GRIS">GRIS</option>
+                                <option value="NEGRO">NEGRO</option>
                             </select>
                         </div>
-                        <input href="index.jsp" type="submit" name="action" value="Finalizar" class="btn btn-outline-info">
-                        <a href="index.jsp">return </a>
-                    </form>    
+                        <input href="index.jsp" type="submit" name="action" value="Finalizar" class="btn btn-outline-info btnend" disabled="true">
+                    </form>
                 </div>
             </div>
 
-
-
-
-
+            <script type="text/javascript" src="../Proyectiva.js"></script>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     </body>
 </html>
