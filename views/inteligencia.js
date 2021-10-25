@@ -200,11 +200,11 @@ $(document).ready(function () {
     $('#formularioEvaluacionInteligencia').submit(function (e) {
 
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
-        window.onbeforeunload = null; //Desactiva la prevencion al cerrar ventana
+        window.onbeforeunload = null; //Desactiva el alert de prevencion al querer cerrar ventana
 
         //Calificamos la prueba realizada por el usuario
         var i=0;//indice para recorrer respuestas
-        //Comparamos respuestas correctas almacenados en archivo json con las que selecciono el usuario
+        //Comparamos respuestas correctas almacenados en archivo json con las que seleccionó el usuario
         $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
             $.each( data, function( key, val ) {
 
@@ -217,7 +217,7 @@ $(document).ready(function () {
                     }
                     ++i;
                 }
-                 //Enviamos las respuestas corectas para mostrar los resultados al cliente usando localStorage
+                 //Guardamos las respuesta correctas en localStorage
                 localStorage.setItem('respuestasCorrectas', respuestasCorrectas);
             });
         });

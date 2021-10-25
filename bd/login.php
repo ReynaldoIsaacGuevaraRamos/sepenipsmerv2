@@ -10,13 +10,17 @@ $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
 $password = (isset($_POST['password'])) ? $_POST['password'] : '';
 
 $pass = hash('ripemd160', $password); //encripto la clave enviada por el usuario para compararla con la clava encriptada y almacenada en la BD
-$consulta = "SELECT correo, password, nombre, id_rol FROM users WHERE correo='$usuario' AND password='$pass' ";
+$consulta = "SELECT correo, password, nombre, id_rol, id FROM users WHERE correo='$usuario' AND password='$pass' ";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $rol = $resultado->fetchColumn(3);
 $resultado->execute();
 $nombreUser = $resultado->fetchColumn(2);
+$resultado->execute();
+$idUsuarioSession = $resultado->fetchColumn(4);
 
+//Guardamos ID del usuario
+setcookie("idUsuarioSession", $idUsuarioSession,time()+3600, "/","", 0);
 
 if($resultado->rowCount() >= 1){
     $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
