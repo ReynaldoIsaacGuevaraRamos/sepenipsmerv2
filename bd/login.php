@@ -22,15 +22,24 @@ $idUsuarioSession = $resultado->fetchColumn(4);
 //Guardamos ID del usuario
 setcookie("idUsuarioSession", $idUsuarioSession,time()+3600, "/","", 0);
 
+$consulta = "SELECT correo, password, nombre, id_rol, sexo FROM users WHERE correo='$usuario' AND password='$pass' ";
+$resultado = $conexion->prepare($consulta);
+$resultado->execute();
+$fila = $resultado->fetchAll();
+print_r ("HOLA");
 if($resultado->rowCount() >= 1){
     $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-    $_SESSION["s_usuario"] = $nombreUser;
-    $_SESSION["s_rol"] = $rol;
+    $_SESSION["s_usuario"] = $fila[0][2];
+    $_SESSION["s_rol"] = $fila[0][3];
+    $_SESSION["s_sexo"] = $fila[0][4];
 }else{
     $_SESSION["s_usuario"] = null;
     $_SESSION["s_rol"] = null;
+    $_SESSION["s_sexo"] = null;
     $data=null;
 }
+
+
 
 print json_encode($data);
 $conexion=null;

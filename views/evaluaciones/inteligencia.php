@@ -18,7 +18,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <title>Inteligencia</title>
     </head>

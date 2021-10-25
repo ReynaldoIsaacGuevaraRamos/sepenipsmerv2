@@ -6,7 +6,9 @@ if ($_SESSION["s_usuario"] === null) {
 }
 
 $rol_usuario = $_SESSION["s_rol"];
-echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
+$rol_sexo = $_SESSION["s_sexo"];
+echo "<script>console.log( 'rol" . $rol_usuario . "' );</script>";
+echo "<script>console.log( 'Sexo: " . $rol_sexo  . "' );</script>";
 ?>
 
 <!doctype html>

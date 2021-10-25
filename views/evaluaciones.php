@@ -30,7 +30,7 @@
                     <p class="card-text ">A continuación encontrará una serie de frases que permitirán conocer sus actitudes e intereses. En general, no
                         existen respuestas correctas o incorrectas, porque las personas tienen distintos intereses y ven las cosas desde
                         distintos puntos de vista. Conteste con sinceridad; de esta forma se podrá conocer mejor su forma de ser.</p>
-                    <form action="./evaluaciones/personalidad.php">
+                    <form method="post"  target="print_popup"  action="./evaluaciones/personalidad.php" onsubmit="window.open('about:blank','print_popup','width=1000,height=800');">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="completePerso" checked disabled>
                             <label class="form-check-label" for="completPerso" >

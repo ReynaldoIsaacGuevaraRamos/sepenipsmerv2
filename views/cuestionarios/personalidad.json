@@ -1,0 +1,1297 @@
+[
+  {
+      "id": "1",
+      "enunciado": "En un negocio sería más interesante encargarse de:",
+      "opcionA": "A. Las máquinas o llevar registros",
+      "opcionB": "B. ?",
+      "opcionC": "C. Entrevistar y hablar con personas"
+  },
+  {
+      "id": "2",
+      "enunciado": "Normalmente me voy a dormir sintiéndome satisfecho de cómo ha ido el día.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "3",
+      "enunciado": "Si observo que la línea de razonamiento de otra persona es incorrecta, normalmente:",
+      "opcionA": "A. Se lo señalo.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Lo paso por alto"
+  },
+  {
+      "id": "4",
+      "enunciado": "Me gusta muchísimo tener invitados y hacer que se lo pasen bien.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "5",
+      "enunciado": "Cuando tomo una decisión siempre pienso cuidadosamente en lo que es correcto y justo.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "6",
+      "enunciado": "Me atrae más pasar una tarde ocupado en una tarea tranquila a la que tenga afición que estar en una reunión animada.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "7",
+      "enunciado": "Admiro más a:",
+      "opcionA": "A. Una persona con capacidad de tipo medio, pero con una moral estricta",
+      "opcionB": "B. ?",
+      "opcionC": "C. Una persona con talento, aunque a veces no sea responsable. "
+  },
+  {
+      "id": "8",
+      "enunciado": "Sería más interesante ser:",
+      "opcionA": "A. Ingeniero de la construcción.",
+      "opcionB": "B. ?",
+      "opcionC": "C.  Escritor de teatro. "
+  },
+  {
+      "id": "9",
+      "enunciado": "Normalmente soy el que da el primer paso al hacer amigos",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "10",
+      "enunciado": "Me encantan las buenas novelas u obras de teatro / cine.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "11",
+      "enunciado": "Cuando la gente autoritaria trata de dominarte hago justamente lo contrario de lo que quiere. ",
+      "opcionA": "A. Si.",
+      "opcionB": "B. ?",
+      "opcionC": "C. No."
+  },
+  {
+      "id": "12",
+      "enunciado": "Algunas veces no congenio muy bien con los demás porque mis ideas no son convencionales y corrientes.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "13",
+      "enunciado": "Muchas personas te “apuñalarían por la espalda” para salir ellas adelante. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "14",
+      "enunciado": "Me meto en problemas porque a veces sigo adelante con mis ideas sin comentarlas con las personas que puedan estar implicadas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "15",
+      "enunciado": "Hablo de mis sentimientos",
+      "opcionA": "A. Con facilidad cuando las personas parecen estar interesadas. ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Solo si no tengo más remedio."
+  },
+  {
+      "id": "16",
+      "enunciado": "Me aprovecho de la gente. ",
+      "opcionA": "A. Algunas veces.  ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Nunca"
+  },
+  {
+      "id": "17",
+      "enunciado": "Mis pensamientos son demasiado complicados y profundos para ser comprendidos por muchas personas. ",
+      "opcionA": "A. Casi nunca  ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo"
+  },
+  {
+      "id": "18",
+      "enunciado": " Prefiero: ",
+      "opcionA": "A. Prefiero:   ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Guardarlos para mis adentros"
+  },
+  {
+      "id": "19",
+      "enunciado": "Pienso a cerca de cosas que debería haber dicho, pero que no las dije ",
+      "opcionA": "A. Casi nunca  ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo"
+  },
+  {
+      "id": "20",
+      "enunciado": "Siempre estoy alerta ante los intentos de propagandas en las cosas que leo ",
+      "opcionA": "A. Si.",
+      "opcionB": "B. ?",
+      "opcionC": "C. No."
+  },
+  {
+      "id": "21",
+      "enunciado": "Si las personas actúan como si yo no les gustara: ",
+      "opcionA": "A. No me perturba ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Normalmente me hace daño"
+  },
+  {
+      "id": "22",
+      "enunciado": "Cuando observo que difiero de alguien en puntos de vista sociales, prefiero: ",
+      "opcionA": "A. discutir el significado de nuestras diferencias básicas",
+      "opcionB": "B. ?",
+      "opcionC": "C. Cambiar el tema"
+  },
+  {
+      "id": "23",
+      "enunciado": "He dicho cosas que hirieron los sentimientos de otros. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "24",
+      "enunciado": "Si tuviera que cocinar o construir algo seguiría las instrucciones exactamente.",
+      "opcionA": "A. Verdadero, para evitar problemas ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, porque podría hacer algo más interesante"
+  },
+  {
+      "id": "25",
+      "enunciado": "Si tuviera que cocinar o construir algo seguiría las instrucciones exactamente.",
+      "opcionA": "A. Con otros ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Yo solo"
+  },
+  {
+      "id": "26",
+      "enunciado": "Me gusta hacer planes con antelación para no perder tiempo en las tareas.",
+      "opcionA": "A.  Raras veces ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo"
+  },
+  {
+      "id": "27",
+      "enunciado": " Normalmente me gusta hacer mis planes yo solo, sin interrupciones y sugerencias de otros. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "28",
+      "enunciado": "Cuando me siento tenso incluso pequeñas cosas me sacan de quicio. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "29",
+      "enunciado": "Puedo encontrarme bastante a gusto en un ambiente desorganizado. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "30",
+      "enunciado": "Si mis planes, cuidadosamente elaborados, tuvieran que ser cambiados a causa de otras personas",
+      "opcionA": "A.  Eso me molestaría e irritaría",
+      "opcionB": "B. ?",
+      "opcionC": "C. Me parecería bien y estaría contento de cambiarlos"
+  },
+  {
+      "id": "31",
+      "enunciado": "Si mis planes, cuidadosamente elaborados, tuvieran que ser cambiados a causa de otras personas",
+      "opcionA": "A. Estar en una oficina, organizando y atendiendo a personas",
+      "opcionB": "B. ?",
+      "opcionC": "C.Estar en una oficina, organizando y atendiendo a personas "
+  },
+  {
+      "id": "32",
+      "enunciado": "Cuando las pequeñas cosas comienzan a marchar mal unas detrás de otras:",
+      "opcionA": "A. Me siento como si no pudiera dormi",
+      "opcionB": "B. ?",
+      "opcionC": "C. Continúo de un modo norma"
+  },
+  {
+      "id": "33",
+      "enunciado": "Me satisface y entretiene cuidarme de las necesidades de los demás.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "34",
+      "enunciado": "A veces hago observaciones tontas , a modode broma, para sorprender a los demás",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "35",
+      "enunciado": "Cuando llega él momento de hacer algo que he planeado y esperado, a veces no me apetece ya continuarlo",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "36",
+      "enunciado": "Cuando llega él momento de hacer algo que he planeado y esperado, a veces no me apetece ya continuarlo",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "37",
+      "enunciado": "Preferiría emplear una tarde: ",
+      "opcionA": "A. Haciendo con tranquilidad y sosiego algo por lo que tenga afición ",
+      "opcionB": "B. ?",
+      "opcionC": "C. En una fiesta animada. "
+  },
+  {
+      "id": "38",
+      "enunciado": "Cuando yo sé muy bien lo que el grupo tiene que hacer, me gusta ser el único en dar las órdenes. ",
+      "opcionA": "A. Si.",
+      "opcionB": "B. ?",
+      "opcionC": "C. No."
+  },
+  {
+      "id": "39",
+      "enunciado": "Me divierte mucho el humor rápido y vivaz de algunas series de televisión",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "40",
+      "enunciado": "Le doy más valor y respeto a las normas y buenas maneras, que a una vida fácil. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "41",
+      "enunciado": "Me encuentro tímido y retraído a la hora de hacer amigos entre personas desconocidas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "42",
+      "enunciado": "Si pudiera, preferiría hacer ejercicio con:",
+      "opcionA": "A. La esgrima o la danza ",
+      "opcionB": "B. ?",
+      "opcionC": "C. El tenis o la lucha libre"
+  },
+  {
+      "id": "43",
+      "enunciado": "Normalmente hay una gran diferencia entre lo que la gente dice y lo que hace. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "44",
+      "enunciado": "Resultaría más interesante ser músico que mecánico. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "45",
+      "enunciado": "Las personas forman su opinión acerca de mí demasiado rápidamente. ",
+      "opcionA": "A. Casi nunca ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo"
+  },
+  {
+      "id": "46",
+      "enunciado": "Soy de esas personas que: ",
+      "opcionA": "A. Siempre están haciendo cosas prácticas que necesitan ser hechas ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Imaginan o piensan acerca de cosas sobre sí mismas "
+  },
+  {
+      "id": "47",
+      "enunciado": "Algunas personas creen que es difícil intimar conmigo. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "48",
+      "enunciado": " Puedo engañar a las personas siendo amigable cuando en realidad me desagradan. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "49",
+      "enunciado": "Mis pensamientos tienden más a girar sobre cosas realistas y prácticas.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "50",
+      "enunciado": "Suelo ser reservado y guardar mis problemas para mis adentros. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "51",
+      "enunciado": "Después de tomar una decisión sobre algo sigo pensando si será acertada o errónea. ",
+      "opcionA": "A. Normalmente verdadero ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Normalmente falso "
+  },
+  {
+      "id": "52",
+      "enunciado": "En el fondo no me gustan las personas que son “diferentes” u originales.",
+      "opcionA": "A. Verdadero, normalmente no me gustan  ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, normalmente las encuentro interesantes "
+  },
+  {
+      "id": "53",
+      "enunciado": "Estoy más interesado en:",
+      "opcionA": "A. Buscar un significado personal a la vida ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Asegurarme un trabajo con un buen sueldo "
+  },
+  {
+      "id": "54",
+      "enunciado": "Me perturbo más que otros cuando las personas se enfadan entre ellas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "55",
+      "enunciado": "Lo que este mundo necesita es: ",
+      "opcionA": "A. Más ciudadanos íntegros y constantes",
+      "opcionB": "B. ?",
+      "opcionC": "C. Más reformadores con opiniones sobre cómo mejorar el mundo"
+  },
+  {
+      "id": "56",
+      "enunciado": "Prefiero los juegos en lo que: ",
+      "opcionA": "A. Se forman equipos o se tiene un compañero",
+      "opcionB": "B. ?",
+      "opcionC": "C. . Cada uno hace su partida "
+  },
+  {
+      "id": "57",
+      "enunciado": "Normalmente dejo algunas cosas a la buena suerte, en vez de hacer planes complejos y con todo detalle.  ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "58",
+      "enunciado": "Frecuentemente tengo periodos de tiempo en que me es difícil abandonar el sentimiento de compadecerme a mí mismo. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "59",
+      "enunciado": "Mis mejores horas del día son aquellas que estoy solo con mis pensamientos y proyectos. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "60",
+      "enunciado": "Si la gente me interrumpe cuando estoy intentando hacer algo, eso no me perturba. ",
+      "opcionA": "A. Verdadero, no me siento mal",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, me molesta "
+  },
+  {
+      "id": "61",
+      "enunciado": "Siempre conservo mis pertenencias en perfectas condiciones. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "62",
+      "enunciado": "A veces me siento frustrado por las personas demasiado rápidamente.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "63",
+      "enunciado": "No me siento a gusto cuando hablo o muestro mis sentimientos de afecto o cariño.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "64",
+      "enunciado": "En mi vida personal, casi siempre alcanzo las metas que me pongo",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "65",
+      "enunciado": "Si el sueldo fuera el mismo, preferiría ser un científico más que un directivo de ventas.  ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "66",
+      "enunciado": "Si la gente hace algo incorrecto, normalmente le digo lo que pienso. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "67",
+      "enunciado": "Pienso que mis necesidades emocionales: ",
+      "opcionA": "A. No están demasiado satisfechas",
+      "opcionB": "B. ?",
+      "opcionC": "C. Están bien satisfechas"
+  },
+  {
+      "id": "68",
+      "enunciado": " Normalmente me gusta estar en medio de mucha actividad y excitación.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "69",
+      "enunciado": "La gente debería insistir, más de lo que hace ahora, en que las normas morales sean seguidas estrictamente.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "70",
+      "enunciado": "Preferiría vestir:",
+      "opcionA": "A. De modo aseado y sencillo",
+      "opcionB": "B. ?",
+      "opcionC": "C. A la moda y original"
+  },
+  {
+      "id": "71",
+      "enunciado": "Me suelo sentir desconcertado si de pronto paso a ser el centro de la atención en un grupo social. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "72",
+      "enunciado": "Me pone irritado que la gente insista en que yosiga las mínimas reglas de seguridad. ",
+      "opcionA": "A. Verdadero, porque no siempre son necesarias",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, por que es importante hacer las cosas correctamente "
+  },
+  {
+      "id": "73",
+      "enunciado": "Comenzar a conversar con extraños:",
+      "opcionA": "A. Nunca me ha dado problemas ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Me cuesta bastante"
+  },
+  {
+      "id": "74",
+      "enunciado": "Si trabajara en un periódico preferiría los temas de: ",
+      "opcionA": "A.  Literatura o cine",
+      "opcionB": "B. ?",
+      "opcionC": "C. Deportes o política"
+  },
+  {
+      "id": "75",
+      "enunciado": "Dejo que pequeñas cosas me perturben más de lo que deberían. ",
+      "opcionA": "A. A veces",
+      "opcionB": "B. ?",
+      "opcionC": "C.Raras veces"
+  },
+  {
+      "id": "76",
+      "enunciado": "Es acertado estar en guardia con los que hablan de modo amable, por que se pueden aprovechar de uno. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "77",
+      "enunciado": "En la calle me detendría más a contemplar un artista pintando que a ver la construcción de un edificio ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "78",
+      "enunciado": "Las personas se hacen perezosas en su trabajo cuando consiguen hacerlo con facilidad. ",
+      "opcionA": "A. Casi nunca ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo "
+  },
+  {
+      "id": "79",
+      "enunciado": "Se me ocurren ideas nuevas sobre todo tipo de cosas, demasiadas para ponerlas en práctica.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "80",
+      "enunciado": "Cuando hablo con alguien que no conozco todavía, no doy más información que la necesaria. ",
+      "opcionA": "A. Normalmente Verdadero",
+      "opcionB": "B. ?",
+      "opcionC": "C. Normalmente Falso"
+  },
+  {
+      "id": "81",
+      "enunciado": "Pongo más atención en:",
+      "opcionA": "A. Las cosas prácticas que me rodean",
+      "opcionB": "B. ?",
+      "opcionC": "C. Los pensamientos y la imaginación "
+  },
+  {
+      "id": "82",
+      "enunciado": "Cuando la gente me critica delante de otros me siento muy descorazonado y herido. ",
+      "opcionA": "A. Casi nunca ",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo "
+  },
+  {
+      "id": "83",
+      "enunciado": "Encuentro más interesante a la gente si sus puntos de vista son diferentes de los de la mayoría.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "84",
+      "enunciado": "Al tratar con la gente es mejor: ",
+      "opcionA": "A. “Poner todas las cartas sobre la mesa” ",
+      "opcionB": "B. ?",
+      "opcionC": "C. “No descubrir tu propio juego” "
+  },
+  {
+      "id": "85",
+      "enunciado": "A veces me gustaría más ponerme en mi sitio que perdonar y olvidar  ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "86",
+      "enunciado": "Me gusta la gente que:",
+      "opcionA": "A. Es estable y tradicional en sus intereses",
+      "opcionB": "B. ?",
+      "opcionC": "C. Reconsidera seriamente sus puntos de vista sobre la vida "
+  },
+  {
+      "id": "87",
+      "enunciado": "A veces me siento demasiado responsable sobre cosas que suceden a mí alrededor. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "88",
+      "enunciado": "El trabajo que me es familiar y habitual:",
+      "opcionA": "A. Me aburre y me da sueño",
+      "opcionB": "B. ?",
+      "opcionC": "C. Me da seguridad y confianza"
+  },
+  {
+      "id": "89",
+      "enunciado": "Logro terminar las cosas mejor cuando trabajo solo que cuando lo hago en equipo ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "90",
+      "enunciado": "Normalmente no me importa si mi habitación está desordenada.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "91",
+      "enunciado": "Me resulta fácil ser paciente, aun cuando alguien es lento para comprender lo que estoy explicándole. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, me cuesta ser paciente"
+  },
+  {
+      "id": "92",
+      "enunciado": "Me gusta unirme a otros que van a hacer algo juntos, como ir a un museo o de excursión. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "93",
+      "enunciado": "Soy algo perfeccionista y me gusta que las cosas se hagan bien. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "94",
+      "enunciado": "Cuándo tengo que hacer una larga cola por algún motivo, no me pongo tan intranquilo y nervioso como la mayoría  ",
+      "opcionA": "A. Verdadero, no me pongo ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, me pongo intranquilo"
+  },
+  {
+      "id": "95",
+      "enunciado": "La gente me trata menos razonablemente de lo que merecen mis buenas intenciones.",
+      "opcionA": "A. A veces",
+      "opcionB": "B. ?",
+      "opcionC": "C. Nunca"
+  },
+  {
+      "id": "96",
+      "enunciado": "Me lo paso bien con gente que muestra abiertamente sus emociones.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "97",
+      "enunciado": "No dejo que me depriman pequeñas cosas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "98",
+      "enunciado": "Si pudiera ayudar en el desarrollo de un invento útil preferiría encargarme de:",
+      "opcionA": "A. Investigarlo en el laboratorio ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Mostrar a las personas su utilización"
+  },
+  {
+      "id": "99",
+      "enunciado": "Si ser cortés y amable no da resultado puedo ser rudo y astuto cuando sea necesario.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "100",
+      "enunciado": "Me gusta ir a menudo a espectáculos y diversiones.  ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "101",
+      "enunciado": "Me siento insatisfecho conmigo mismo. ",
+      "opcionA": "A. A veces ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Rara veces"
+  },
+  {
+      "id": "102",
+      "enunciado": "Si nos perdiéramos en una cuidad y los amigos no estuvieran de acuerdo conmigo en el camino a seguir: ",
+      "opcionA": "A. No protestaría y les seguiría",
+      "opcionB": "B. ?",
+      "opcionC": "C. Les haría saber que yo creía que mi camino era mejor "
+  },
+  {
+      "id": "103",
+      "enunciado": " La gente me considera una persona animada y sin preocupaciones. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "104",
+      "enunciado": "Si el banco se descuidara y no me cobrara algo que debiera, creo que: ",
+      "opcionA": "A. Lo indicaría y lo pagaría",
+      "opcionB": "B. ?",
+      "opcionC": "C. Yo no tengo por qué decírselo "
+  },
+  {
+      "id": "105",
+      "enunciado": "Siempre tengo que estar luchando contra mi timidez. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "106",
+      "enunciado": "Los profesores, sacerdotes y otras personas emplean mucho tiempo intentando impedirnos hacer lo que deseamos. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "107",
+      "enunciado": "Cuando estoy con un grupo, normalmente me siento, escucho y dejo que los demás lleven el peso de la conversación. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "108",
+      "enunciado": "Normalmente aprecio más belleza de un poema que una excelente estrategia en un deporte.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "109",
+      "enunciado": "Si uno es franco y abierto los demás intentan aprovecharse de él.",
+      "opcionA": "A. Lo indicaría y lo pagaría",
+      "opcionB": "B. ?",
+      "opcionC": "C. Yo no tengo por qué decírselo "
+  },
+  {
+      "id": "110",
+      "enunciado": "Siempre me interesan las cosas mecánicas y soy bastante bueno para arreglarlas.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "111",
+      "enunciado": "A veces estoy tan enfrascado en mis pensamientos que, a no ser que salga de ellos, pierdo la noción del tiempo y desordeno o no encuentro mis cosa.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "112",
+      "enunciado": "Parece como si no pudiera confiar en más de la mitad de la gente que voy conociendo.",
+      "opcionA": "A. Verdadero, no se puede confiar en ella",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso, se puede confiar en ella "
+  },
+  {
+      "id": "113",
+      "enunciado": "Normalmente descubro que conozco a los demás mejor que ellos me conocen a mí.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "114",
+      "enunciado": "A menudo los demás dicen que mis ideas son realistas y prácticas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "115",
+      "enunciado": "Si creo que lo merecen, hago agudas y sarcásticas observaciones a los demás.",
+      "opcionA": "A. A veces",
+      "opcionB": "B. ?",
+      "opcionC": "C. Nunca"
+  },
+  {
+      "id": "116",
+      "enunciado": "A veces me siento como si hubiera hecho algo malo, aunque realmente no lo haya hecho. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "117",
+      "enunciado": "Me resulta fácil hablar sobre mi vida, incluso sobre aspectos que otros considerarían muy personales. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "118",
+      "enunciado": "Me gusta diseñar modos por los que el mundo pudiera cambiar y mejorar.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "119",
+      "enunciado": "Tiendo a ser muy sensible y preocuparme mucho acerca de algo que he hecho. ",
+      "opcionA": "A. Casi nunca",
+      "opcionB": "B. ?",
+      "opcionC": "C. A menudo"
+  },
+  {
+      "id": "120",
+      "enunciado": "En el periódico que acostumbro a hojear me intereso más por: ",
+      "opcionA": "A. Los artículos sobre los problemas sociales ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Todas las noticias locales."
+  },
+  {
+      "id": "121",
+      "enunciado": "Preferiría emplear una tarde libre en:",
+      "opcionA": "A. Leer o trabajar en solitario en un proyecto.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Hacer alguna tarea con los amigos."
+  },
+  {
+      "id": "122",
+      "enunciado": "Cuando hay algo molesto que hacer, prefiero:",
+      "opcionA": "A. Dejarlo a un lado hasta que no haya más remedio que hacerlo",
+      "opcionB": "B. ?",
+      "opcionC": "C. Comenzar a hacerlo de inmediato."
+  },
+  {
+      "id": "123",
+      "enunciado": "Prefiero tomar la comida de medio día:",
+      "opcionA": "A. Con un grupo de gente.",
+      "opcionB": "B. ?",
+      "opcionC": "C. En solitario"
+  },
+  {
+      "id": "124",
+      "enunciado": "Soy paciente con las personas, incluso cuando no son corteses y consideradas con mis sentimientos. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "125",
+      "enunciado": "Cuando hago algo, normalmente me tomo tiempo para pensar antes en todo lo que necesito para la tarea.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "126",
+      "enunciado": "Me siento molesto cuando la gente emplea mucho tiempo para explicar algo. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "127",
+      "enunciado": "Mis amigos probablemente me describen como una persona",
+      "opcionA": "A. Cálida y amigable. ",
+      "opcionB": "B. ?",
+      "opcionC": "C.  Formal y objetiva."
+  },
+  {
+      "id": "128",
+      "enunciado":  "Cuando algo me perturba, normalmente me olvido pronto de ello.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "129",
+      "enunciado": "Como afición agradable prefiero: ",
+      "opcionA": "A. Hacer o reparar algo.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Trabajar en grupo en una tarea comunitaria."
+  },
+  {
+      "id": "130",
+      "enunciado": "Creo que debo reclamar si en el restaurant recibo mal servicio o alimentos deficientes. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "131",
+      "enunciado": "Tengo más cambios de humor que la mayoría de las personas que conozco.",
+      "opcionA": "A. Normalmente Verdadero",
+      "opcionB": "B. ?",
+      "opcionC": "C. Normalmente Falso"
+  },
+  {
+      "id": "132",
+      "enunciado":  "Cuando los demás no ven las cosas como la veo yo, normalmente logro convencerlos.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "133",
+      "enunciado": "Creo que ser libre para ser lo que desee es más importante que tener buenos modales y respetar las normas.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "134",
+      "enunciado":  "Me encanta hacer reír a la gente con historias ingeniosas.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "135",
+      "enunciado": "Me considero una persona socialmente muy atrevida y comunicativa.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "136",
+      "enunciado":  "Si una persona es lo suficientemente lista para eludir las normas sin que parezca que las incumple: ",
+      "opcionA": "A. Podría incumplirlas si tiene razonas especiales para ello. ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Debería seguirlas a pesar de todo. "
+  },
+  {
+      "id": "137",
+      "enunciado": "Cuando me uno a un nuevo grupo, normalmente encajo pronto.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "138",
+      "enunciado":  "Prefiero leer historias rudas o de acción realista más que novelas sentimentales e imaginativas ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "139",
+      "enunciado": "Sospecho que la persona que se muestra abiertamente amigable conmigo pueda ser desleal cuando yo no esté delante.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "140",
+      "enunciado":  "Cuando era niño empleaba la mayor parte de mi tiempo en: ",
+      "opcionA": "A. Hacer o construir algo. ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Leer o imaginar cosas ideales. "
+  },
+  {
+      "id": "141",
+      "enunciado": "Muchas personas son demasiado quisquillosas y sensibles, y por su propio bien deberían “endurecerse”. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "142",
+      "enunciado":  "Me muestro tan interesado en pensar en las ideas que a veces paso por alto los detalles prácticos. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "143",
+      "enunciado":  "Si alguien me hace una pregunta demasiado personal intento cuidadosamente evitar contestarla. ",
+      "opcionA": "A. Normalmente Verdadero",
+      "opcionB": "B. ?",
+      "opcionC": "C. Normalmente Falso"
+  },
+  {
+      "id": "144",
+      "enunciado": "Cuando me piden hacer una tarea voluntaria digo que estoy demasiado ocupado. ",
+      "opcionA": "A. A veces.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Rara veces."
+  },
+  {
+      "id": "145",
+      "enunciado":  "Mis amigos me consideran una persona algo abstraída y no siempre práctica.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "146",
+      "enunciado":  "Me siento muy abatido cuando la gente me critica en un grupo. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "147",
+      "enunciado": "Les surgen más problemas a quienes:",
+      "opcionA": "A. Se cuestionan o cambian métodos que son ya satisfactorios.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Descartan enfoques nuevos o prometedores."
+  },
+  {
+      "id": "148",
+      "enunciado":  "Soy muy cuidadoso cuando se trata de elegir a alguien con quien “abrirme” francamente. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "149",
+      "enunciado": "Me gusta más intentar nuevos modos de hacer las cosas que seguir caminos ya conocidos. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "150",
+      "enunciado": "Los demás dicen que suelo ser demasiado critico conmigo mismo.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "151",
+      "enunciado":  "Generalmente me gusta más una comida si contiene alimentos familiares y cotidianos que si tiene alimentos poco corrientes. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "152",
+      "enunciado": " Puedo pasar fácilmente una mañana entera sin tener necesidad de hablar con alguien.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "153",
+      "enunciado": "Deseo ayudar a las personas.",
+      "opcionA": "A. Siempre.",
+      "opcionB": "B. ?",
+      "opcionC": "C. A veces."
+  },
+  {
+      "id": "154",
+      "enunciado":  "Yo creo que: ",
+      "opcionA": "A. Algunos trabajos no deberían ser hechos tan cuidadosamente como otros.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Cualquier trabajo habría que hacerlo bien si es que se va a hacer."
+  },
+  {
+      "id": "155",
+      "enunciado": "Me resulta difícil ser paciente cuando la gente me critica. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "156",
+      "enunciado": "Prefiero los momentos en que hay gente a mí alrededor.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "157",
+      "enunciado":  "Cuando realizo una tarea no me encuentro satisfecho a no ser que ponga especial atención incluso a los pequeños detalles. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "158",
+      "enunciado": "Algunas veces me “ sacan de quicio” de un modo insoportable pequeñas cosas, aunque reconozca que son triviales.",
+      "opcionA": "A. Si.",
+      "opcionB": "B. ?",
+      "opcionC": "C. No."
+  },
+  {
+      "id": "159",
+      "enunciado":  "Me gusta más escuchar a la gente hablar de sus sentimientos personales que de otros temas. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "160",
+      "enunciado": "Hay ocasiones en que no me siento de humar para ver a nadie.",
+      "opcionA": "A. Muy raras veces.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Bastante a menudo."
+  },
+  {
+      "id": "161",
+      "enunciado":  "Me gustaría más ser consejero orientador que arquitecto. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "162",
+      "enunciado": "En mi vida cotidiana casi nunca me encuentro con problemas que no puedo afrontar. ",
+      "opcionA": "A. Verdadero, puedo afrontarlos fácilmente.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "163",
+      "enunciado": "Cuando las personas hacen algo que me molesta, normalmente:",
+      "opcionA": "A. No le doy importancia. ",
+      "opcionB": "B. ?",
+      "opcionC": "C. Se lo digo."
+  },
+  {
+      "id": "164",
+      "enunciado":  "Yo creo más en:",
+      "opcionA": "A. Ser claramente serio en la vida cotidiana.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Seguir casi siempre el dicho “Diviértete y sé feliz”. "
+  },
+  {
+      "id": "165",
+      "enunciado": "Me gusta que haya alguna competitividad en las cosas que hago. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "166",
+      "enunciado": "La mayoría de las normas se han hecho para no cumplirlas cuando haya buenas razones para ello.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "167",
+      "enunciado":  "Me cuesta bastante hablar delante de un grupo numeroso de personas.",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "168",
+      "enunciado": "Preferiría un hogar en el que:",
+      "opcionA": "A. Se sigan normas estrictas de conducta.",
+      "opcionB": "B. ?",
+      "opcionC": "C. No haya muchas normas."
+  },
+  {
+      "id": "169",
+      "enunciado":  "En las reuniones sociales suelo sentirme tímido e inseguro de mí mismo. ",
+      "opcionA": "A. Verdadero.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Falso."
+  },
+  {
+      "id": "170",
+      "enunciado": "En la televisión prefiero: ",
+      "opcionA": "A. Un programa sobre nuevos inventos prácticos.",
+      "opcionB": "B. ?",
+      "opcionC": "C. Un concierto de un artista famoso."
+  },
+  {
+      "id": "171",
+      "enunciado":  "“Minuto” es a “hora” como “Segundo” es a:",
+      "opcionA": "A. Minuto.",
+      "opcionB": "B. Milisegundo.",
+      "opcionC": "C. Hora."
+  },
+  {
+      "id": "172",
+      "enunciado": "“Renacuajo” es a “rana” como “larva” es a:",
+      "opcionA": "A. Araña.",
+      "opcionB": "B. Gusano.",
+      "opcionC": "C. Insecto."
+  },
+  {
+      "id": "173",
+      "enunciado": "“Jamón” es a “cerdo” como “chuleta” es a: ",
+      "opcionA": "A. Cordero.",
+      "opcionB": "B. Pollo.",
+      "opcionC": "C. Merluza."
+  },
+  {
+      "id": "174",
+      "enunciado":  "“Hielo” es a “agua” como “roca” es a",
+      "opcionA": "A. Lava.",
+      "opcionB": "B. Arena.",
+      "opcionC": "C. Petróleo. "
+  },
+  {
+      "id": "175",
+      "enunciado": "“Mejor” es a “pésimo” como “peor” es a :  ",
+      "opcionA": "A. Malo.",
+      "opcionB": "B. Santo.",
+      "opcionC": "C. Óptimo."
+  },
+  {
+      "id": "176",
+      "enunciado": "Cual de las tres palabras indica algo diferente de las otras dos:",
+      "opcionA": "A. Terminal.",
+      "opcionB": "B. Estacional.",
+      "opcionC": "C. Cíclico."
+  },
+  {
+      "id": "177",
+      "enunciado":  "¿Cuál de las tres palabras indica algo diferente de las otras dos?",
+      "opcionA": "A. Gato.",
+      "opcionB": "B. Cerca.",
+      "opcionC": "C. Planeta."
+  },
+  {
+      "id": "178",
+      "enunciado": "Lo opuesto de “correcto” es lo opuesto de:",
+      "opcionA": "A. Bueno.",
+      "opcionB": "B. Erróneo.",
+      "opcionC": "C. Adecuado."
+  },
+  {
+      "id": "179",
+      "enunciado":  "¿Cuál de las tres palabras indica algo diferente de las otras dos?  ",
+      "opcionA": "A. Probable.",
+      "opcionB": "B. Eventual.",
+      "opcionC": "C. Inseguro."
+  },
+  {
+      "id": "180",
+      "enunciado": "Lo opuesto de lo opuesto de “inexacto” es:  ",
+      "opcionA": "A. Casual.",
+      "opcionB": "B. Puntual.",
+      "opcionC": "C. Incorrecto."
+  },
+  {
+      "id": "181",
+      "enunciado":  "¿Qué número debe seguir al final de éstos? 1 – 4 – 9 – 16 .... ",
+      "opcionA": "A. 20.",
+      "opcionB": "B. 25.",
+      "opcionC": "C. 25."
+  },
+  {
+      "id": "182",
+      "enunciado": "¿Qué letra debe seguir al final de éstas? A – B – D – G .... ",
+      "opcionA": "A. H. ",
+      "opcionB": "B. K. ",
+      "opcionC": "C. J. "
+  },
+  {
+      "id": "183",
+      "enunciado": "¿Qué letra debe seguir al final de éstas? E – I – L .... ",
+      "opcionA": "A. M.",
+      "opcionB": "B. N.",
+      "opcionC": "C. O."
+  },
+  {
+      "id": "184",
+      "enunciado":  "¿Qué número debe seguir al final de éstos? 1/12 – 1/6 – 1/3 – 2/3 ....",
+      "opcionA": "A. 3 / 4.",
+      "opcionB": "B. 4 / 3.",
+      "opcionC": "C. 3 / 2. "
+  },
+  {
+      "id": "185",
+      "enunciado": "¿Qué número debe seguir al final de éstos? 1 2 0 3 –1.... ",
+      "opcionA": "A. 5.",
+      "opcionB": "B. 4.",
+      "opcionC": "C. -3."
+  }
+]
