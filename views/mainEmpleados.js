@@ -48,7 +48,7 @@ $(document).ready(function () {
     $('#formAdministradores').submit(function (e) {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
 
-        dui = parseInt(fila.find('td:eq(1)').text());
+        dui = parseInt($.trim($('#dui').val()));
         nombre = $.trim($('#nombre').val());
         apellido = $.trim($('#apellido').val());
         correo = $.trim($('#correo').val());
