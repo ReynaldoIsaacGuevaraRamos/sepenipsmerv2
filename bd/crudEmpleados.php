@@ -12,7 +12,7 @@ $telefono = (isset($_POST['telefono'])) ? $_POST['telefono'] : '';
 $sexo = (isset($_POST['sexo'])) ? $_POST['sexo'] : '';
 $fechaNacimiento = (isset($_POST['fechaNacimiento'])) ? $_POST['fechaNacimiento'] : '';
 $password = (isset($_POST['password'])) ? $_POST['password'] : '';
-
+$duiAntiguo = (isset($_POST['duiAntiguo'])) ? $_POST['duiAntiguo'] : '';
 
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 
@@ -36,10 +36,19 @@ switch ($opcion) {
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 2://ACTUALIZAR - UPDATE
+        //Se borra expediente en evaluaciones
+        $consultaEvaluaciones = "DELETE FROM evaluaciones WHERE id_user='$duiAntiguo' ";
+        $resultadoEvaluaciones = $conexion->prepare($consultaEvaluaciones);
+        $resultadoEvaluaciones->execute();
+        //Se actualiza el empleado
         $password = hash('ripemd160', $telefono); // Incriptación de la contraseña
         $consulta = "UPDATE users SET dui='$dui', nombre='$nombre', apellido='$apellido', correo='$correo', cargo='$cargo', telefono='$telefono', sexo='$sexo', fechaNacimiento='$fechaNacimiento', password='$password' WHERE id='$id' ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
+        //Se agrega expediente de empleado en evaluaciones ya actualizado
+        $consultaEvaluaciones = "INSERT INTO evaluaciones (id_user) VALUES('$dui') ";
+        $resultadoEvaluaciones = $conexion->prepare($consultaEvaluaciones);
+        $resultadoEvaluaciones->execute();
 
         $consulta = "SELECT * FROM users WHERE id='$id' AND id_rol='$id_rol' ";
         $resultado = $conexion->prepare($consulta);
