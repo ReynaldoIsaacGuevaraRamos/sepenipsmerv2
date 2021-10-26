@@ -17,15 +17,9 @@ $rol = $resultado->fetchColumn(3);
 $resultado->execute();
 $nombreUser = $resultado->fetchColumn(2);
 
-//Obtenemos el ID del Usuario y lo guardamos en un cookie
+//Obtenemos el DUI del Usuario
 $resultado->execute();
-$idUsuarioSession = $resultado->fetchColumn(4);
-setcookie("idUsuarioSession", $idUsuarioSession,time()+3600, "/","", 0);
-
-//Obtenemos el DUI del Usuario y lo guardamos en un cookie
-$resultado->execute();
-$DuiUsuarioSession = $resultado->fetchColumn(5);
-setcookie("DuiUsuarioSession", $DuiUsuarioSession,time()+3600, "/","", 0);
+$DuiUsuario = $resultado->fetchColumn(5);
 
 $consulta = "SELECT correo, password, nombre, id_rol, sexo FROM users WHERE correo='$usuario' AND password='$pass' ";
 $resultado = $conexion->prepare($consulta);
@@ -37,11 +31,13 @@ if($resultado->rowCount() >= 1){
     $_SESSION["s_usuario"] = $fila[0][2];
     $_SESSION["s_rol"] = $fila[0][3];
     $_SESSION["s_sexo"] = $fila[0][4];
+    $_SESSION["s_dui"] = $DuiUsuario;
     $_SESSION["s_usu"] = $usuario;
 }else{
     $_SESSION["s_usuario"] = null;
     $_SESSION["s_rol"] = null;
     $_SESSION["s_sexo"] = null;
+    $_SESSION["s_dui"] = $DuiUsuario;
     $_SESSION["s_usu"] = $usuario;
     $data=null;
 }

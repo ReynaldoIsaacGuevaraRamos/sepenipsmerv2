@@ -41,8 +41,11 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <div id="imagenPregunta" class="form-group" style="margin-bottom: 0px;">
                             <img src="../../img/grafico-circular.png" width="300" height="300" />
                         </div>
-                        <div class="form-group" style="margin-bottom: 0px;">
-                            <label id="respuestasCorrectas"></label>
+                        <div class="form-group">
+                            <p id="respuestasCorrectas" class="text-center">Bold text.</p>
+                            <p id="rango" class="text-center">Bold text.</p>
+                            <p id="percentiles" class="text-center">Bold text.</p>
+                            <p id="percentiles" class="mb-0"></p>
                         </div>
                         <input id="btnAceptar" onclick="window.close();" class="btn btn-primary btn-lg" type="submit" value="Aceptar">
                     </form>    

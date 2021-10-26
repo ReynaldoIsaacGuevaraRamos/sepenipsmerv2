@@ -29,7 +29,7 @@ if($rol_usuario==4){
     }
 
     //Se obtiene el DUI del empleado
-    $DuiUsuarioSession=$_COOKIE['DuiUsuarioSession'];
+    $DuiUsuarioSession=$_SESSION["s_dui"];
 
     //Se verifica si el usuario tiene alguna evaluacion habilitada
     include_once '../bd/conexion.php';

@@ -217,8 +217,8 @@ $(document).ready(function () {
                     }
                     ++i;
                 }
-                 //Guardamos las respuesta correctas en localStorage
-                localStorage.setItem('respuestasCorrectas', respuestasCorrectas);
+                 //Guardamos las respuesta correctas en el localstorage
+                 localStorage.setItem('respuestasCorrectas',respuestasCorrectas);
             });
         });
 
