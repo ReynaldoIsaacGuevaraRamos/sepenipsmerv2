@@ -46,7 +46,7 @@ switch ($opcion) {
         $resultado->execute();
         break;
     case 7://LEER - CONSULTAR - READ
-        $consulta = "SELECT * FROM users WHERE id_rol='$id_rol' ";
+        $consulta = "SELECT * FROM evaluaciones WHERE id_rol='$id_rol' ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

@@ -20,9 +20,13 @@
                                             <th>Apellido</th>
                                             <th>Cargo</th>
                                             <th>Evaluar Inteligencia</th>
+                                            <th>E</th>
                                             <th>Evaluar Personalidad</th>
+                                            <th>E</th>
                                             <th>Evaluar Proyectiva</th>
+                                            <th>E</th>
                                             <th>Evaluar Emocional</th>
+                                            <th>E</th>
                                         </tr>
                                     </thead>
                                     <tbody>
