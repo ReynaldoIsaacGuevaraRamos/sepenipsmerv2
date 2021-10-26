@@ -39,9 +39,6 @@
                     <form id="PruevaProyectiva">
                       <div class="form-group">
                           <div class="quiz">
-                              <div class="quiz-user">
-                                  <legend id="leyendaIndice" class="border-bottom bm-4">Pregunta 1 de 185</legend>
-                              </div>
                               <div id="quiz-timer" class="quiz-timer">
                                   <div class="alert alert-success m-0 p-1">
                                       Tiempo
