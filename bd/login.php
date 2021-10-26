@@ -25,32 +25,7 @@ setcookie("idUsuarioSession", $idUsuarioSession,time()+3600, "/","", 0);
 //Obtenemos el DUI del Usuario y lo guardamos en un cookie
 $resultado->execute();
 $DuiUsuarioSession = $resultado->fetchColumn(5);
-
-//Se verifica si el usuario tiene alguna evaluacion habilitada
-$consultaEvaluaciones = "SELECT state_inteligencia, state_personalidad, state_proyectiva, state_emocional FROM evaluaciones WHERE id_user='$DuiUsuarioSession'";
-$resultadoEvaluaciones = $conexion->prepare($consultaEvaluaciones);
-$resultadoEvaluaciones->execute();
-$state_inteligencia = $resultadoEvaluaciones->fetchColumn(0);
-$resultadoEvaluaciones->execute();
-$state_personalidad=$resultadoEvaluaciones->fetchColumn(1);
-$resultadoEvaluaciones->execute();
-$state_proyectiva=$resultadoEvaluaciones->fetchColumn(2);
-$resultadoEvaluaciones->execute();
-$state_emocional=$resultadoEvaluaciones->fetchColumn(3);
-
-if($state_inteligencia==1){
-    setcookie("state_inteligencia", $state_inteligencia,time()+3600, "/","", 0);
-}
-if($state_personalidad==1){
-    setcookie("state_personalidad", $state_personalidad,time()+3600, "/","", 0);
-}
-if($state_proyectiva==1){
-    setcookie("state_proyectiva", $state_proyectiva,time()+3600, "/","", 0);
-}
-if($state_emocional==1){
-    setcookie("state_emocional", $state_emocional,time()+3600, "/","", 0);
-}
-//Fin de la verificacion
+setcookie("DuiUsuarioSession", $DuiUsuarioSession,time()+3600, "/","", 0);
 
 $consulta = "SELECT correo, password, nombre, id_rol, sexo FROM users WHERE correo='$usuario' AND password='$pass' ";
 $resultado = $conexion->prepare($consulta);
