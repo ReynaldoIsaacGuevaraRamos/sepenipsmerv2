@@ -47,8 +47,7 @@ $(document).ready(function () {
     //submit para el inserción y Actualización
     $('#formAdministradores').submit(function (e) {
         e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
-
-        dui = $.trim($('#dui').val());
+        dui = parseInt($.trim($('#dui').val()));
         nombre = $.trim($('#nombre').val());
         apellido = $.trim($('#apellido').val());
         correo = $.trim($('#correo').val());
@@ -60,7 +59,7 @@ $(document).ready(function () {
             url: "../bd/crudEmpleados.php",
             type: "POST",
             datatype: "json",
-            data: { id: id, dui: dui, nombre: nombre, apellido: apellido, correo: correo, cargo: cargo, telefono: telefono, sexo: sexo, fechaNacimiento: fechaNacimiento, opcion: opcion },
+            data: { id: id, dui: dui, nombre: nombre, apellido: apellido, correo: correo, cargo: cargo, telefono: telefono, sexo: sexo, fechaNacimiento: fechaNacimiento, opcion: opcion, duiAntiguo: duiAntiguo },
             success: function (data) {
                 tablaEmpleados.ajax.reload(null, false);
             }
@@ -74,6 +73,7 @@ $(document).ready(function () {
     $("#btnNuevoEmple").click(function () {
         opcion = 1; //AGREGAR            
         id = null;
+        duiAntiguo=null;
         $("#formAdministradores").trigger("reset");
         $(".modal-header").css("background-color", "#17a2b8");
         $(".modal-header").css("color", "white");
@@ -96,6 +96,7 @@ $(document).ready(function () {
         fila = $(this).closest("tr");
         id = parseInt(fila.find('td:eq(0)').text()); //capturo el ID		            
         dui = fila.find('td:eq(1)').text();
+        duiAntiguo= parseInt(fila.find('td:eq(1)').text());
         nombre = fila.find('td:eq(2)').text();
         apellido = fila.find('td:eq(3)').text();
         correo = fila.find('td:eq(4)').text();
