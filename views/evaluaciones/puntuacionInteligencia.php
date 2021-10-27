@@ -42,9 +42,9 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                             <img src="../../img/grafico-circular.png" width="300" height="300" />
                         </div>
                         <div class="form-group">
-                            <p id="respuestasCorrectas" class="text-center">Bold text.</p>
-                            <p id="rango" class="text-center">Bold text.</p>
-                            <p id="percentiles" class="text-center">Bold text.</p>
+                            <p id="respuestasCorrectas" class="text-center"></p>
+                            <p id="rango" class="text-center"></p>
+                            <p id="percentiles" class="text-center"></p>
                             <p id="percentiles" class="mb-0"></p>
                         </div>
                         <input id="btnAceptar" onclick="window.close();" class="btn btn-primary btn-lg" type="submit" value="Aceptar">
