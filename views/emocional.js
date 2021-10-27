@@ -1,118 +1,77 @@
-$(document).ready(function () {
-    
-    /*---------------------------------------------------------*/
-    /*variables globales*/
-    /*---------------------------------------------------------*/
-    //Guarda las respuestas de la evaluacion
-    var respuestas = new Array(24);
-    //Nos indica en que pregunta nos encontramos
-    var indice=0;
-    //Si retrocedemos esta variable nos indicara hasta donde contestamos
-    var respuestaAlcanzada=0;
-    //Respuesta del usuario
-    var respuestaSuperior, respuestaInferior;
+/* DESHABILITAR BOTON ES UN ASCO
+function deshabilitarboton(){
+    if($("#pregA").prop('checked')===false && $("#pregB").prop('checked')===false && 
+    $("#pregC").prop('checked')===false && $("#pregD").prop('checked')===false && $("#pregE").prop('checked')===false){
+        $('#btn2').attr("disabled", true);
+    }
+}       */
 
-    /*---------------------------------------------------------*/
-    /*acciones iniciales*/
-    /*---------------------------------------------------------*/
-    //Deshabilitamos boton de siguiente y anterior
-    //$("#btnSiguiente").attr('disabled', true);
-    //$(".btnAnterior").attr('disabled', true);
-    //Ocultamos boton submit Terminar
-    $('#btnTerminar').hide();
+var currentQuestion = 0;
+var score = 0;
+var toQuestions = questions.length;
 
+var container = document.getElementById('quizContainer');
+var pre = document.getElementById('pre');
+var questionEl = document.getElementById('question');
+var op1 = document.getElementById('pregA');
+var op2 = document.getElementById('pregB');
+var op3 = document.getElementById('pregC');
+var op4 = document.getElementById('pregD');
+var op5 = document.getElementById('pregE');
+var nextButton = document.getElementById('nextButton');
+var resultCont = document.getElementById('result');
 
-    /*---------------------------------------------------------*/
-    /*Acciones al hacer clic en el Boton siguiente*/
-    /*---------------------------------------------------------*/
-    $('#btnSiguiente').click(function ()
-    {
-        //Activamos el boton anterior
-        $(".btnAnterior").attr('disabled', false);
+function loadQuestion (questionIndex){
+    var q = questions[questionIndex];
+    questionEl.textContent = q.question;
+    pre.textContent = q.pre + (questionIndex + 1) + ' de 24';
+    op1.textContent = q.option1;
+    op2.textContent = q.option2;
+    op3.textContent = q.option3;
+    op4.textContent = q.option4;
+    op5.textContent = q.option5;
+};
 
-        //Se guarda la respuesta
-        respuestas[indice]= respuestaSuperior+respuestaInferior;
-        //Se ponen en null las respuestas nuevamente
-        respuestaSuperior=null;
-        respuestaInferior= null;
+function loadNextQuestion () {
+    var selectedOption = document.querySelector('input[type=radio]:checked');
+    //$('#nextButton').attr("disabled", true);
+    if(!selectedOption){
+        alert('Por favor selecciona una respuesta');
+        return;
+    }
 
-        //Verificamos que no nos sobrepasemos de la pregunta 24
-        if(indice<24)
-        {   
-            //Si el indice es igual a respuesta alcanzada, este aumenta su valor
-            if(indice==respuestaAlcanzada)
-            {
-                ++respuestaAlcanzada;
-            }
-            //Se aumenta indice
-            indice += 4;
-            //Se modifica la leyenda y la imagen de la evaluacion
-            $("#leyendaIndice1").html('Pregunta '+(indice+1)+' de 24');
-            $("#leyendaIndice2").html('Pregunta '+(indice+2)+' de 24');
-            $("#leyendaIndice3").html('Pregunta '+(indice+3)+' de 24');
-            $("#leyendaIndice4").html('Pregunta '+(indice+4)+' de 24');
-
-            var preguntas = ["Dejo que mis sentimientos afecten a mis pensamientos.",
-            "Pienso en mi estado de ánimo constantemente.", 
-            "A menudo pienso en mis sentimientos.", 
-            "Presto mucha atención a cómo me siento.", 
-            "Tengo claros mis sentimientos.", 
-            "Frecuentemente puedo definir mis sentimientos.",
-            "Casi siempre sé cómo me siento.", 
-            "Normalmente conozco mis sentimientos sobre las personas.", 
-            "A menudo me doy cuenta de mis sentimientos en diferentes situaciones.", 
-            "Siempre puedo decir cómo me siento.", 
-            "A veces puedo decir cuáles son mis emociones.", 
-            "Puedo llegar a comprender mis sentimientos.", 
-            "Aunque a veces me siento triste, suelo tener una visión positiva.", 
-            "Aunque me sienta mal, procuro pensar en cosas agradables.", 
-            "Cuando estoy triste, pienso en todos los placeres de la vida.", 
-            "Intento tener pensamientos positivos, aunque me sienta mal.", 
-            "Si doy demasiadas vueltas a las cosas, complicándolas, trato de calmarme.", 
-            "Me preocupo por tener un buen estado de ánimo.",
-            "Tengo mucha energía cuando me siento feliz",
-            "Cuando estoy enfadado intento cambiar mi estado de ánimo."];
-
-            // for(var i = 0; i <= preguntas.length; i++){
-            //     $("#pregunta1").html(preguntas[i]);
-            //     $("#pregunta2").html(preguntas[i]);
-            //     $("#pregunta3").html(preguntas[i]);
-            //     $("#pregunta4").html(preguntas[i]);
-            //     $("#pregunta5").html(preguntas[i]);
-            // }
-           
-            var a6 = "Dejo que mis sentimientos afecten a mis pensamientos.";
-            var a7 = "Pienso en mi estado de ánimo constantemente.";
-            var a8 = "A menudo pienso en mis sentimientos.";
-            var a9 = "Presto mucha atención a cómo me siento.";
+    var answer = selectedOption.value;
+    if(questions[currentQuestion].answer == answer){
+        score += 10;
+    }
+    selectedOption.checked = false;
+    currentQuestion++;
+    if(currentQuestion == toQuestions -1){
+        nextButton.textContent = 'Finalizar prueba';
+    }
+    if(currentQuestion == toQuestions){
+        container.style.display = 'none';
+        resultCont.style.display = 'true';
+        resultCont.textContent = 'Tus respuestas: ' + score;
+        return;
+    }
+    loadQuestion(currentQuestion);
 
 
-            $("#pregunta1").html(a6);
-            $("#pregunta2").html(a7);
-            $("#pregunta3").html(a8);
-            $("#pregunta4").html(a9);
+    //GUARDAR SELECCION DEL USUARIO
+    if(op1 = document.querySelector('input[type=radio]:checked')){
+        op1.value(1)
+    } else if(op2 = document.querySelector('input[type=radio]:checked')){
+        op2.value(2)
+    } else if(op3 = document.querySelector('input[type=radio]:checked')){
+        op3.value(3)
+    } else if(op4 = document.querySelector('input[type=radio]:checked')){
+        op4.value(4)
+    } else if(op5 = document.querySelector('input[type=radio]:checked')){
+        op5.value(5)
+    }
 
-            //Se deshabilita de nuevo el boton siguiente
-  //          $("#btnSiguiente").attr('disabled', true);
+}
+loadQuestion(currentQuestion);
 
-
-            //Si se esta en la pregunta 48, se oculta el boton siguiente y se muestra el boton terminar
-            if(indice==20){
-                $('#btnTerminar').show();
-                //$("#btnTerminar").attr('disabled', true); //Deshabilitamos el boton siguiente
-                $('#btnSiguiente').hide();
-            }
-
-            //verificamos si ya se respondio la pregunta a mostrar
-            if(indice<=respuestaAlcanzada)
-            {
-                //Si ya la habia contestado, se muestra la respuestas respectiva
-                respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior
-                respuestaInferior=respuestas[indice].charAt(1); //Obtenemos respuestas dado inferior
-
-            }
-        }
-    });
-
-});
 

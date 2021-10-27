@@ -31,7 +31,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         </div>
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav" align="right">
-                        <a class="nav-item nav-link" href="index.jsp">Salir</a>
+                        <a class="nav-item nav-link" href="../evaluaciones.php">Salir</a>
                         </div>
                     </div>
                 </div>
@@ -43,119 +43,59 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                 <div class="card-body text-left">
                     <form name="myForm" method="post">
                         
-                        <div class="mb-1">
-                            <legend class="border-bottom bm-4">Indicaciones:</legend>
-                            <label class="form-label">Lea detenidamente cada enunciado, no hay respuestas correctas o incorrectas, marque la respuesta que más se aproxime a sus preferencias:</label>
-
-                        <!-- TIME -->
-                        <div id="quiz-timer" class="quiz-timer">
-                            <div class="alert alert-success m-0 p-1">
-                                Tiempo 
-                                <strong id="testclock">36:00</strong>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="mb-1">
-                            <legend id="leyendaIndice1" class="border-bottom bm-4">Pregunta 1 de 24</legend>
-                            <label id="pregunta1" class="form-label">Presta mucha atención a los sentimientos.</label>
-
-                        </div>
-                        <div class="mb-3">
-                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio1" id="btn1radio1" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn1radio1">Nada de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio1" id="btn1radio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn1radio2">Algo de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio1" id="btn1radio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn1radio3">Bastante de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio1" id="btn1radio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn1radio4">Muy de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio1" id="btn1radio5" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn1radio5">Totalmente de acuerdo</label>
-                            </div>
-                        </div>
                         
-                        <div class="mb-1">
-                            <legend id="leyendaIndice2" class="border-bottom bm-4">Pregunta 2 de 24</legend>
-                            <label id="pregunta2" class="form-label">Normalmente me preocupo por lo que siento:</label>
-
-                        </div>
-                        <div class="mb-3">
-                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio2" id="btn2radio1" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn2radio1">Nada de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio2" id="btn2radio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn2radio2">Algo de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio2" id="btn2radio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn2radio3">Bastante de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio2" id="btn2radio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn2radio4">Muy de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio2" id="btn2radio5" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn2radio5">Totalmente de acuerdo</label>
+                        <!-- Question 1 -->
+                        <div id="quizContainer" class="container">
+                        <form method="POST" id="form">
+                            <div class="mb-1">
+                                <legend id="pre" class="border-bottom bm-4">Pregunta 1 de 24</legend>
+                                <div class="mb-1">
+                            <!-- TIME -->
+                            <div id="quiz-timer" class="quiz-timer">
+                                <div class="alert alert-success m-0 p-1">
+                                    Tiempo 
+                                    <strong id="testclock">20:00</strong>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-1">
-                            <legend id="leyendaIndice3" class="border-bottom bm-4">Pregunta 3 de 24</legend>
-                            <label id="pregunta3" class="form-label">Normalmente dedico tiempo a pensar en mis emociones:</label>
 
-                        </div>
-                        <div class="mb-3">
-                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio3" id="btn3radio1" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn3radio1">Nada de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio3" id="btn3radio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn3radio2">Algo de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio3" id="btn3radio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn3radio3">Bastante de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio3" id="btn3radio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn3radio4">Muy de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio3" id="btn3radio5" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn3radio5">Totalmente de acuerdo</label>
+                                <label id="question" class="form-label">Presta mucha atención a los sentimientos.</label>
                             </div>
-                        </div>
-                        <div class="mb-1">
-                            <legend id="leyendaIndice4" class="border-bottom bm-4">Pregunta 4 de 24</legend>
-                            <label id="pregunta4" class="form-label">Pienso que merece la pena prestar atención a mis emociones:</label>
+                            <div class="mover">
+                                
+                            <div class="mb-3">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" value="1" class="btn-check" name="btnradio1" id="pregA" autocomplete="off">
+                                <label id="option" class="btn btn-outline-primary" for="pregA">Nada de acuerdo</label>
 
-                        </div>
-                        <div class="mb-3">
-                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio4" id="btn4radio1" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn4radio1">Nada de acuerdo</label>
+                                <input type="radio" value="2" class="btn-check" name="btnradio1" id="pregB" autocomplete="off">
+                                <label id="option" class="btn btn-outline-primary" for="pregB">Algo de acuerdo</label>
 
-                                <input type="radio" class="btn-check" name="btnradio4" id="btn4radio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn4radio2">Algo de acuerdo</label>
+                                <input type="radio" value="3" class="btn-check" name="btnradio1" id="pregC" autocomplete="off">
+                                <label id="option" class="btn btn-outline-primary" for="pregC">Bastante de acuerdo</label>
 
-                                <input type="radio" class="btn-check" name="btnradio4" id="btn4radio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn4radio3">Bastante de acuerdo</label>
+                                <input type="radio" value="4" class="btn-check" name="btnradio1" id="pregD" autocomplete="off">
+                                <label id="option" class="btn btn-outline-primary" for="pregD">Muy de acuerdo</label>
 
-                                <input type="radio" class="btn-check" name="btnradio4" id="btn4radio4" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn4radio4">Muy de acuerdo</label>
-
-                                <input type="radio" class="btn-check" name="btnradio4" id="btn4radio5" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btn4radio5">Totalmente de acuerdo</label>
+                                <input type="radio" value="5" class="btn-check" name="btnradio1" id="pregE" autocomplete="off">
+                                <label id="option" class="btn btn-outline-primary" for="pregE">Totalmente de acuerdo</label>
+                                </div>
+                            </div><br>
+                                <div id="result" class="container result" style="display:none;">
+                                    <legend class="border-bottom bm-4" style="text-align:center;">Prueba finalizada</legend>
+                                    <label  class="form-label" style="margin-left: 130px;">Su resultado es: Dominio moderado de sus emociones</label><br><br>
+                                    <img src="../../img/emocional-resultado.jpg" class="card-img-top" alt="..." style="width:380px; margin-left:18%;"><br><br>
+                                    <a class="btn btn-primary" href="../evaluaciones/emocional.php"" role="button" style="width:100%; height:40px;">Aceptar</a>
+                                </div>
                             </div>
+                            <button id='nextButton' type="button" class="btn btn-primary" onclick="loadNextQuestion();" style="width:100%; height:50px;">Siguiente</button>
+                        </form>
                         </div>
+
+
+                        <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Siguiente" onClick="submitRadioButton()"-->     
                         
-                        <!-- <div class="mb-3">
-                            <input  type="submit" name="action" value="Siguiente" class="btn btn-outline-info">
-                            <a href="index.jsp">return </a>
-                        </div> -->
-                        <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Siguiente" onClick="submitRadioButton()"-->
-                        <button id='btnSiguiente' type="button" class="btn btn-primary">Siguiente</button>
-                        <input id="btnTerminar" class="btn btn-primary" type="submit" value="Terminar">
+                        <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Terminar"-->
 
                     </form>    
 
@@ -166,10 +106,12 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
 
         <!-- jQuery, Popper.js, Bootstrap JS -->
         <script src="../../assets/jquery/jquery-3.3.1.min.js"></script>
+        <!--Preguntas de la prueba-->
+        <script type="text/javascript" src="../questionEmocional.js"></script>
         <!--Importar JS del examen de prueba proyectiva-->
         <script type="text/javascript" src="../emocional.js"></script>
         <!--Importar JS que controlara el cronometro de la evaluacion-->
-        <script type="text/javascript" src="../cronometroTestInteligencia.js"></script>
+        <script type="text/javascript" src="../cronoTestEmocional.js"></script>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
