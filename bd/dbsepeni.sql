@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2021 a las 08:58:26
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.9
+-- Tiempo de generación: 25-10-2021 a las 19:48:08
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `dbsepeni` 
--- El correo es el usuario y la contraseña es el telefono
+-- Base de datos: `dbsepeni`
+--
 
 -- --------------------------------------------------------
 
@@ -38,6 +38,14 @@ CREATE TABLE `evaluaciones` (
   `date_start` datetime DEFAULT NULL,
   `date_finish` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `evaluaciones`
+--
+
+INSERT INTO `evaluaciones` (`id`, `id_user`, `state_evaluacion`, `state_inteligencia`, `state_personalidad`, `state_proyectiva`, `state_emocional`, `date_start`, `date_finish`) VALUES
+(1, 333333333, 0, 0, 0, 1, 0, NULL, NULL),
+(2, 666666666, 0, 0, 1, 1, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -60,12 +68,19 @@ CREATE TABLE `resultados_emocional` (
 --
 
 CREATE TABLE `resultados_inteligencia` (
-  `id_result` varchar(100) NOT NULL,
-  `id_evaluacion` int(11) NOT NULL,
+  `id_result` int(9) NOT NULL,
+  `id_evaluacion` int(11) DEFAULT NULL,
   `puntaje` int(11) NOT NULL,
   `resultado` varchar(100) DEFAULT NULL,
   `date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `resultados_inteligencia`
+--
+
+INSERT INTO `resultados_inteligencia` (`id_result`, `id_evaluacion`, `puntaje`, `resultado`, `date`) VALUES
+(0, NULL, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -156,7 +171,8 @@ INSERT INTO `users` (`id`, `dui`, `nombre`, `apellido`, `sexo`, `cargo`, `fechaN
 --
 ALTER TABLE `evaluaciones`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `id_user` (`id_user`) USING BTREE;
 
 --
 -- Indices de la tabla `resultados_emocional`
@@ -209,7 +225,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `evaluaciones`
 --
 ALTER TABLE `evaluaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -231,7 +247,7 @@ ALTER TABLE `users`
 -- Filtros para la tabla `evaluaciones`
 --
 ALTER TABLE `evaluaciones`
-  ADD CONSTRAINT `evaluaciones_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `evaluaciones_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`dui`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `resultados_emocional`

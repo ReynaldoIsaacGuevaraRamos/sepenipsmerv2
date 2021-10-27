@@ -1,5 +1,5 @@
 //Tiempo que durara la evaluacion en 'minutos:segundos'
-var minutos=36; //36 minuto
+var minutos=45; //36 minuto
 var segundos=0; //0 segundos
 
 function mostrarCronometro()
@@ -7,7 +7,7 @@ function mostrarCronometro()
 
     var divReloj=document.getElementById('quiz-timer');//Elemento que contendra el reloj
     var reloj= document.getElementById("testclock"); //Elemento donde se mostrará el tiempo
-    var formulario= document.getElementById("formularioEvaluacionInteligencia"); //formulario de la prueba
+    var formulario= document.getElementById("formularioEvaluacionPersonalidad"); //formulario de la prueba
     
     --segundos;//Cada segundo, se disminuye un segundo
 
@@ -32,7 +32,7 @@ function mostrarCronometro()
         clearInterval(intervalo);//Detenemos e tiempo
 
         //Se crea y se dispara un evento submit artificialmente
-        const form = document.querySelector("#formularioEvaluacionInteligencia");
+        const form = document.querySelector("#formularioEvaluacionPersonalidad");
         const formTrigger = form.querySelector("button.submit");
         const submitEvent = new SubmitEvent("submit", { submitter: formTrigger });
         form.dispatchEvent(submitEvent);

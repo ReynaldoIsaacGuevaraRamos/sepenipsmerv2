@@ -11,6 +11,8 @@ $(document).ready(function () {
     var respuestaAlcanzada=0;
     //Respuesta del usuario
     var respuestaSuperior, respuestaInferior;
+    //Variable que contendrá el numero de respuestas correctas
+    var respuestasCorrectas=0;
 
     /*---------------------------------------------------------*/
     /*acciones iniciales*/
@@ -37,11 +39,11 @@ $(document).ready(function () {
         //Se muestra al usuario la cara superior del dado seleccionado
         if(btnValue==2 || btnValue==3)
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35" style="transform:rotate(90deg);"/>');
             respuestaSuperior=btnValue;
         }else
         {
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35"/>');
             respuestaSuperior=btnValue;
         }
 
@@ -49,13 +51,14 @@ $(document).ready(function () {
         if(respuestaInferior!=null && respuestaSuperior!=null){
             $("#btnSiguiente").attr('disabled', false); //Habilitamos el boton siguiente
 
-            //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
+            //Se guarda la respuesta
+            respuestas[indice]= respuestaSuperior+respuestaInferior;
+
+            //Si es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
                 $("#btnTerminar").attr('disabled', false);
                 //Por motivos de visualizacion de respuestas, tambien aumentamos respuestaAlcanzada
                 respuestaAlcanzada=47;
-                //Se guarda la respuesta
-                respuestas[indice]= respuestaSuperior+respuestaInferior;
             }
         }
 
@@ -76,11 +79,11 @@ $(document).ready(function () {
          //Se muestra al usuario el boton seleccionado por medio del div carasuperiorDado
          if(btnValue==2 || btnValue==3)
          {
-             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50" style="transform:rotate(90deg);"/>');
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35" style="transform:rotate(90deg);"/>');
              respuestaInferior=btnValue;
          }else
          {
-             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="50" height="50"/>');
+             $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/dice-'+btnValue+'.svg" width="35" height="35"/>');
              respuestaInferior=btnValue;
          }
 
@@ -89,13 +92,14 @@ $(document).ready(function () {
 
             $("#btnSiguiente").attr('disabled', false); //Habilitamos el boton siguiente
 
+            //Se guarda la respuesta
+            respuestas[indice]= respuestaSuperior+respuestaInferior;
+
             //Si ha seleccionado ambas caras del dado y es la pregunta 48 habilitamos el boton 'terminar'
             if(indice==47){
                 $("#btnTerminar").attr('disabled', false);
                 //Por motivos de visualizacion de respuestas, tambien aumentamos respuestaAlcanzada
                 respuestaAlcanzada=47;
-                //Se guarda la respuesta
-                respuestas[indice]= respuestaSuperior+respuestaInferior;
             }
         }
 
@@ -109,8 +113,6 @@ $(document).ready(function () {
         //Activamos el boton anterior
         $(".btnAnterior").attr('disabled', false);
 
-        //Se guarda la respuesta
-        respuestas[indice]= respuestaSuperior+respuestaInferior;
         //Se ponen en null las respuestas nuevamente
         respuestaSuperior=null;
         respuestaInferior= null;
@@ -127,16 +129,16 @@ $(document).ready(function () {
             indice++;
             //Se modifica la leyenda y la imagen de la evaluacion
             $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
-            $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+            $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="225" height="225" />');
 
             //Se deshabilita de nuevo el boton siguiente
             $("#btnSiguiente").attr('disabled', true);
 
             //Tambien se deshabilitan los botones de respuestas
             $('#dadoSuperior button').siblings().removeClass('active');
-            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>');
+            $("#caraSuperiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>');
             $('#dadoInferior button').siblings().removeClass('active');
-            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>');
+            $("#caraInferiorDado").html('<img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>');
 
             //Si se esta en la pregunta 48, se oculta el boton siguiente y se muestra el boton terminar
             if(indice==47){
@@ -146,7 +148,7 @@ $(document).ready(function () {
             }
 
             //verificamos si ya se respondio la pregunta a mostrar
-            if(indice<=respuestaAlcanzada)
+            if(indice<=respuestaAlcanzada && respuestas[indice]!=null)
             {
                 //Si ya la habia contestado, se muestra la respuestas respectiva
                 respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior
@@ -183,7 +185,7 @@ $(document).ready(function () {
 
         //Se modifica la leyenda y la imagen de la evaluacion
         $("#leyendaIndice").html('Pregunta '+(indice+1)+' de 48');
-        $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="300" height="300" />');
+        $("#imagenPregunta").html('<img src="../../img/evaluacionInteligencia/'+(indice+1)+'.gif" width="225" height="225" />');
         //Se muestra las respuestas que el usuario habia seleccionado
         respuestaSuperior=respuestas[indice].charAt(0); //Obtenemos respuestas dado superior
         respuestaInferior=respuestas[indice].charAt(1); //Obtenemos respuestas dado inferior
@@ -193,8 +195,36 @@ $(document).ready(function () {
     });
 
     /*---------------------------------------------------------*/
-    /*Cronometro de la evaluacion*/
+    /*Al hacer clic en el boton terminar*/
     /*---------------------------------------------------------*/
+    $('#formularioEvaluacionInteligencia').submit(function (e) {
+
+        e.preventDefault(); //evita el comportambiento normal del submit, es decir, recarga total de la página
+        window.onbeforeunload = null; //Desactiva el alert de prevencion al querer cerrar ventana
+
+        //Calificamos la prueba realizada por el usuario
+        var i=0;//indice para recorrer respuestas
+        //Comparamos respuestas correctas almacenados en archivo json con las que seleccionó el usuario
+        $.getJSON( "../respuestasCuestionarios/inteligencia.json", function( data ) {
+            $.each( data, function( key, val ) {
+
+                //Recorremos y comparamos cada respuesta
+                while(i<48){
+
+                    //Si la respuesta es correcta se aumenta la variable respuestasCorrectas
+                    if(val[i].respuesta.toString() == respuestas[i]){
+                        ++respuestasCorrectas;
+                    }
+                    ++i;
+                }
+                 //Guardamos las respuesta correctas en el localstorage
+                 localStorage.setItem('respuestasCorrectas',respuestasCorrectas);
+            });
+        });
+
+        //Se muestra ventana con las respuestas correctas, la puntuacion (percentiles) y el resultado de la evaluacion
+        window.open("puntuacionInteligencia.php", "_self"); 
+    });
 
 
 });

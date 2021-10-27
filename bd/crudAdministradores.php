@@ -26,6 +26,10 @@ switch ($opcion) {
         $consulta = "INSERT INTO users (dui, nombre, apellido, correo, cargo, telefono, sexo, fechaNacimiento, password, id_rol) VALUES('$dui', '$nombre', '$apellido', '$correo', '$cargo', '$telefono', '$sexo', '$fechaNacimiento', '$password',  '$id_rol') ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
+        //Se agrega expediente del administrador en evaluaciones
+        $consultaEvaluaciones = "INSERT INTO evaluaciones (id_user) VALUES('$dui') ";
+        $resultadoEvaluaciones = $conexion->prepare($consultaEvaluaciones);
+        $resultadoEvaluaciones->execute();
 
         $consulta = "SELECT * FROM users WHERE id_rol='$id_rol' ORDER BY id DESC LIMIT 1";
         $resultado = $conexion->prepare($consulta);

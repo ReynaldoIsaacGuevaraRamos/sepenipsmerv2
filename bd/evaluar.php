@@ -35,7 +35,7 @@ switch ($opcion) {
         break;
     case 4:
             //Consultar los empleados
-        $consulta = "SELECT * FROM users WHERE id_rol!='$id_rol_soporte' AND id_rol!='$id_rol_psicologo' AND id_rol!='$id_rol_administrador' ";
+        $consulta = "SELECT users.id, users.dui, users.nombre, users.apellido, users.cargo, evaluaciones.state_inteligencia, evaluaciones.state_personalidad, evaluaciones.state_proyectiva, evaluaciones.state_emocional FROM users INNER JOIN evaluaciones ON users.dui = evaluaciones.id_user WHERE users.id_rol!='$id_rol_soporte' AND users.id_rol!='$id_rol_psicologo' AND users.id_rol!='$id_rol_administrador' ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);

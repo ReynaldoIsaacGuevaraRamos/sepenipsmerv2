@@ -15,8 +15,11 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-              <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="../../css/mainEval.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script   src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <title>Inteligencia</title>
     </head>
     <body>
@@ -61,17 +64,17 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                             <label>¿Que combinación sigue?</label>
                         </div>
                         <div id="imagenPregunta" class="form-group" style="margin-bottom: 0px;">
-                            <img src="../../img/evaluacionInteligencia/1.gif" width="300" height="300" />
+                            <img src="../../img/evaluacionInteligencia/1.gif" width="225" height="225" />
                         </div>
                         <!-- Dado que mostrara la respuesta elegida  -->
                         <div class="form-group">
                             <div class="row">
                                 <div id="caraSuperiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg" width="35" height="35"/>
                                 </div>
                                 <div class="w-100"></div>
                                 <div id="caraInferiorDado" class="col">
-                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg"  alt="Cinque Terre" width="50" height="50"/>
+                                    <img src = "../../img/evaluacionInteligencia/iconos/question-square.svg"  alt="Cinque Terre" width="35" height="35"/>
                                 </div>
                             </div>
                         </div>
@@ -144,16 +147,14 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
         <script type="text/javascript" src="../inteligencia.js"></script>
         <!--Importar JS que controlara el cronometro de la evaluacion-->
         <script type="text/javascript" src="../cronometroTestInteligencia.js"></script>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
                 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+        <!--Dará una alerta si el usuario desea cerrar la ventana-->
         <script language="JavaScript" type="text/javascript">
      
             window.onbeforeunload = preguntarAntesDeSalir;
@@ -164,5 +165,6 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                 return "¿Seguro que quieres salir?";
             }
         </script>
+
     </body>
 </html>

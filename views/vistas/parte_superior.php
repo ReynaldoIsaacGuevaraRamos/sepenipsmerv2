@@ -6,7 +6,59 @@ if ($_SESSION["s_usuario"] === null) {
 }
 
 $rol_usuario = $_SESSION["s_rol"];
-echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
+$rol_sexo = $_SESSION["s_sexo"];
+echo "<script>console.log( 'rol" . $rol_usuario . "' );</script>";
+echo "<script>console.log( 'Sexo: " . $rol_sexo  . "' );</script>";
+
+if($rol_usuario==4){
+
+    //Cada vez que el empleado recargue el sistema de evaluaciones se verificarán los permisos para realizar las pruebas
+
+    //Se borran los cookies ya existentes
+    if(isset($_COOKIE['state_inteligencia'])){
+        setcookie( 'state_inteligencia', "", time()- 60, "/","", 0);
+    }
+    if(isset($_COOKIE['state_personalidad'])){
+        setcookie( 'state_personalidad', "", time()- 60, "/","", 0);
+    }
+    if(isset($_COOKIE['state_proyectiva'])){
+        setcookie( 'state_proyectiva', "", time()- 60, "/","", 0);
+    }
+    if(isset($_COOKIE['state_emocional'])){
+        setcookie( 'state_emocional', "", time()- 60, "/","", 0);
+    }
+
+    //Se obtiene el DUI del empleado
+    $DuiUsuarioSession=$_SESSION["s_dui"];
+
+    //Se verifica si el usuario tiene alguna evaluacion habilitada
+    include_once '../bd/conexion.php';
+    $objeto = new Conexion();
+    $conexion = $objeto->Conectar();
+    $consultaEvaluaciones = "SELECT state_inteligencia, state_personalidad, state_proyectiva, state_emocional FROM evaluaciones WHERE id_user='$DuiUsuarioSession'";
+    $resultadoEvaluaciones = $conexion->prepare($consultaEvaluaciones);
+    $resultadoEvaluaciones->execute();
+    $state_inteligencia = $resultadoEvaluaciones->fetchColumn(0);
+    $resultadoEvaluaciones->execute();
+    $state_personalidad=$resultadoEvaluaciones->fetchColumn(1);
+    $resultadoEvaluaciones->execute();
+    $state_proyectiva=$resultadoEvaluaciones->fetchColumn(2);
+    $resultadoEvaluaciones->execute();
+    $state_emocional=$resultadoEvaluaciones->fetchColumn(3);
+
+    if($state_inteligencia==1){
+        setcookie("state_inteligencia", $state_inteligencia,time()+3600, "/","", 0);
+    }
+    if($state_personalidad==1){
+        setcookie("state_personalidad", $state_personalidad,time()+3600, "/","", 0);
+    }
+    if($state_proyectiva==1){
+        setcookie("state_proyectiva", $state_proyectiva,time()+3600, "/","", 0);
+    }
+    if($state_emocional==1){
+        setcookie("state_emocional", $state_emocional,time()+3600, "/","", 0);
+    }
+}
 ?>
 
 <!doctype html>
@@ -81,7 +133,7 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
             <?php  } ?>
             <!-- Nav Item - Vista del psicolgo -->
             <?php
-            if ($rol_usuario == 2 || $rol_usuario == 1) { //Si es  psicologo o soporte 
+            if ($rol_usuario == 2 || $rol_usuario == 1) { //Si es  psicologo o soporte
             ?>
                 <li class="nav-item active">
                     <a class="nav-link" href="administrador.php">
@@ -120,6 +172,11 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                         <span>Evaluaciones</span></a>
                 </li>
             <?php  } ?>
+            <li class="nav-item active">
+                    <a class="nav-link" href="Cambio.php">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Cambiar Contrasena</span></a>
+                </li>
             <!-- Divider -->
             <?php
             if ($rol_usuario == 3 || $rol_usuario == 2 || $rol_usuario == 1) { //Si es administrador, psicologo o soporte

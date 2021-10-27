@@ -18,12 +18,15 @@
                                             <th>Dui</th>
                                             <th>Nombre</th>
                                             <th>Apellido</th>
-                                            <th>Correo</th>
                                             <th>Cargo</th>
-                                            <th>Telefono</th>
-                                            <th>Sexo</th>
-                                            <th>Nacimiento</th>
-                                            <th>Acciones</th>
+                                            <th>Evaluar Inteligencia</th>
+                                            <th>E</th>
+                                            <th>Evaluar Personalidad</th>
+                                            <th>E</th>
+                                            <th>Evaluar Proyectiva</th>
+                                            <th>E</th>
+                                            <th>Evaluar Emocional</th>
+                                            <th>E</th>
                                         </tr>
                                     </thead>
                                     <tbody>
