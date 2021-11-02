@@ -13,7 +13,7 @@ $opcion = 1;
 $id_rol = 4; //Este sera el id_rol que identificara al rol de Empleado
 switch ($opcion) {
     case 1:  //INSERTAR - INSERT
-        $consulta = "INSERT INTO resultados_inteligencia (id_user, percentiles, rango, date) VALUES ('$dui', '$percentiles', '$rango', '$fechaEvaluacion') ";
+        $consulta = "INSERT INTO resultados_inteligencia (id_user, percentiles, rango) VALUES ('$dui', '$percentiles', '$rango') ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         //Deshabilitamos tambien la prueba de inteligencia para el empleado

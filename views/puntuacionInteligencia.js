@@ -23,29 +23,6 @@ $(document).ready(function () {
     localStorage.removeItem('percentiles');
     localStorage.removeItem('rango');
 
-//Funcion que guarda la informacion en la BD
-function guardarDatos(rango, percentiles){
-
-    var opcion=1;
-    //Obtenemos fecha formateada
-    var date = new Date();
-    const formatDate = (current_datetime)=>{
-    let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds();
-    return formatted_date;
-    }
-    fechaEvaluacion=formatDate(date);
-
-    //Enviamos datos a BD
-    $.ajax({
-        url: "../../bd/guardarResultadoInteligencia.php",
-        type: "POST",
-        datatype: "json",
-        data: { rango: rango, percentiles: percentiles, fechaEvaluacion: fechaEvaluacion, opcion: opcion},
-        success: function (data) {
-            console.log("Datos guardados en BD: Percentiles= "+percentiles+', rango= '+rango+', fecha= '+fechaEvaluacion);
-        }
-    });
-}
 
 });
 

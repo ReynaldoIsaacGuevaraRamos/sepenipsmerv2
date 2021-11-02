@@ -226,7 +226,16 @@ $(document).ready(function () {
                  localStorage.setItem('rango',rango);
             });
         });
-
+        //Enviamos datos a BD
+        $.ajax({
+        url: "../../bd/guardarResultadoInteligencia.php",
+        type: "POST",
+        datatype: "json",
+        data: { rango: localStorage.getItem('rango'), percentiles: localStorage.getItem('percentiles')},
+        success: function (data) {
+            console.log("Datos guardados en BD: Percentiles= "+percentiles+', rango= '+rango+', fecha= '+fechaEvaluacion);
+        }
+    });
         //Se muestra ventana con las respuestas correctas, la puntuacion (percentiles) y el resultado de la evaluacion
         window.open("puntuacionInteligencia.php", "_self"); 
     });
@@ -311,4 +320,29 @@ $(document).ready(function () {
 
 
 });
+
+//Funcion que guarda la informacion en la BD
+function guardarDatos(rango, percentiles)
+{
+
+    var opcion=1;
+    //Obtenemos fecha formateada
+    var date = new Date();
+    const formatDate = (current_datetime)=>{
+    let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds();
+    return formatted_date;
+    }
+    var fechaEvaluacion=formatDate(date);
+
+    //Enviamos datos a BD
+    $.ajax({
+        url: "../../bd/guardarResultadoInteligencia.php",
+        type: "POST",
+        datatype: "json",
+        data: { rango: rango, percentiles: percentiles, fechaEvaluacion: fechaEvaluacion, opcion: opcion},
+        success: function (data) {
+            console.log("Datos guardados en BD: Percentiles= "+percentiles+', rango= '+rango+', fecha= '+fechaEvaluacion);
+        }
+    });
+}
 
