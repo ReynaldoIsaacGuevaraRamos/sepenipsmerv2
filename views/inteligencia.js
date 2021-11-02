@@ -217,14 +217,97 @@ $(document).ready(function () {
                     }
                     ++i;
                 }
-                 //Guardamos las respuesta correctas en el localstorage
+                //Calculamos el percentil y el rango del empleado
+                var percentiles= calcularPercentiles(respuestasCorrectas);
+                var rango= calcularRango(percentiles);
+                //Guardamos las respuesta correctas en el localstorage
                  localStorage.setItem('respuestasCorrectas',respuestasCorrectas);
+                 localStorage.setItem('percentiles',percentiles);
+                 localStorage.setItem('rango',rango);
             });
         });
 
         //Se muestra ventana con las respuestas correctas, la puntuacion (percentiles) y el resultado de la evaluacion
         window.open("puntuacionInteligencia.php", "_self"); 
     });
+
+    /*-----------------------------------------------------------------*/
+    /*Funcion que calcula los percentiles que el empleado ha obtenido*/
+    /*----------------------------------------------------------------*/
+    function calcularPercentiles(respuestasCorrectas)
+    {
+       var percentiles=0;
+       //Se calculan los percentiles
+       if(respuestasCorrectas<16){
+           percentiles=1;
+       }
+       else if(respuestasCorrectas<20){
+           percentiles=5;
+       }
+       else if(respuestasCorrectas<24){
+           percentiles=10;
+       }
+       else if(respuestasCorrectas==24){
+           percentiles=20;
+       }
+       else if(respuestasCorrectas==25){
+           percentiles=25;
+       }
+       else if(respuestasCorrectas<29){
+           percentiles=30;
+       }
+       else if(respuestasCorrectas<31){
+           percentiles=40;
+       }
+       else if(respuestasCorrectas<33){
+           percentiles=50;
+       }
+       else if(respuestasCorrectas<35){
+           percentiles=60;
+       }
+       else if(respuestasCorrectas==35){
+           percentiles=70;
+       }
+       else if(respuestasCorrectas==36){
+           percentiles=75;
+       }
+       else if(respuestasCorrectas<40){
+           percentiles=80;
+       }
+       else if(respuestasCorrectas<45){
+           percentiles=95;
+       }
+       else{
+           percentiles=99;
+       }
+   
+       return percentiles;
+    }
+    /*---------------------------------------------------------*/
+    /*Funcion que calcula el rango del empleado*/
+    /*---------------------------------------------------------*/
+    function calcularRango(percentiles)
+    {
+     //Se calcula el rango
+    var rango="";
+    if(percentiles<10){
+        rango="Deficiente";
+    }
+    else if(percentiles<50){
+        rango="Inferior al termino medio";
+    }
+    else if(percentiles<75){
+        rango="Termino medio";
+    }
+    else if(percentiles<95){
+        rango="Superior al termino medio";
+    }
+    else{
+        rango="Superior";
+    }
+
+    return rango;
+    }
 
 
 });
