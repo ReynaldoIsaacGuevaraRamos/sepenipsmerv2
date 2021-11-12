@@ -1,10 +1,3 @@
-/* DESHABILITAR BOTON ES UN ASCO
-function deshabilitarboton(){
-    if($("#pregA").prop('checked')===false && $("#pregB").prop('checked')===false && 
-    $("#pregC").prop('checked')===false && $("#pregD").prop('checked')===false && $("#pregE").prop('checked')===false){
-        $('#btn2').attr("disabled", true);
-    }
-}       */
 
 var currentQuestion = 0;
 var score = 0;
@@ -51,8 +44,9 @@ function loadNextQuestion () {
     }
     if(currentQuestion == toQuestions){
         container.style.display = 'none';
-        resultCont.style.display = 'true';
-        resultCont.textContent = 'Tus respuestas: ' + score;
+        document.getElementById('result').style.display = 'block';
+        //resultCont.style.display = 'block';
+        //resultCont.textContent = 'Tus respuestas: ' + score;
         return;
     }
     loadQuestion(currentQuestion);

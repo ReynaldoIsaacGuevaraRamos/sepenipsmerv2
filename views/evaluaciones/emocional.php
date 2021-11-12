@@ -81,20 +81,23 @@ echo "<script>console.log( 'Debug Objects: " . $rol_usuario . "' );</script>";
                                 <label id="option" class="btn btn-outline-primary" for="pregE">Totalmente de acuerdo</label>
                                 </div>
                             </div><br>
-                                <div id="result" class="container result" style="display:none;">
-                                    <legend class="border-bottom bm-4" style="text-align:center;">Prueba finalizada</legend>
-                                    <label  class="form-label" style="margin-left: 130px;">Su resultado es: Dominio moderado de sus emociones</label><br><br>
-                                    <img src="../../img/emocional-resultado.jpg" class="card-img-top" alt="..." style="width:380px; margin-left:18%;"><br><br>
-                                    <a class="btn btn-primary" href="../evaluaciones/emocional.php"" role="button" style="width:100%; height:40px;">Aceptar</a>
-                                </div>
+                            
                             </div>
                             <button id='nextButton' type="button" class="btn btn-primary" onclick="loadNextQuestion();" style="width:100%; height:50px;">Siguiente</button>
                         </form>
                         </div>
 
+                        <!-- RESULTADO FINAL -->
+                        <div id="result" class="container result" style="display: none;" >
+                            <legend class="border-bottom bm-4" style="text-align:center;">Prueba finalizada</legend>
+                            <label  class="form-label" style="text-align:center; ">Su resultado es: Dominio moderado de sus emociones</label><br><br>
+                            <!-- <label  class="form-label" style="text-align:center; ">Su resultado es: <?php echo $resultado?></label><br><br> -->
+                            <img src="../../img/emocional-resultado.jpg" class="card-img-top" alt="..." style="width:380px; display: block; margin: auto;"><br>
+                            <a class="btn btn-primary" href="../evaluaciones.php"" role="button" style="width:100%; height:40px;">Aceptar</a><br>
+                        </div>
+
 
                         <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Siguiente" onClick="submitRadioButton()"-->     
-                        
                         <!--input id="btnTerminar" class="btn btn-primary" type="submit" value="Terminar"-->
 
                     </form>    
